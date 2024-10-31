@@ -1,4 +1,4 @@
 class Animal < ApplicationRecord
-  has_many :user_favorite
-  has_many :users, through: :user_favorite
+  has_many :user_favorites
+  has_many :users, through: :user_favorites
 end
