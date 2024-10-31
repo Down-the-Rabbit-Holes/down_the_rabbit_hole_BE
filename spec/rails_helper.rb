@@ -80,7 +80,8 @@ end
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   config.hook_into :webmock
-  # config.filter_sensitive_data('<MOVIE_API_KEY>') { Rails.application.credentials.tmdb_movie[:key] }
+  config.filter_sensitive_data('<ANIMAL_API_KEY>') { Rails.application.credentials.ninja_animals[:key] }
+  config.filter_sensitive_data('<PEXEL_API_KEY>') { Rails.application.credentials.pexels[:key] }
   config.default_cassette_options = { re_record_interval: 7.days }
   config.configure_rspec_metadata!
   config.allow_http_connections_when_no_cassette = true
