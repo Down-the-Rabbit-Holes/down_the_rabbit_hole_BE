@@ -16,5 +16,9 @@ Rails.application.routes.draw do
   # end
 
   # GET '/api/v1/animals', to: 'api/v1/animals#index'
+  # get "/api/v1/animals", to: "api/v1/animals#index"
+  post "/api/v1/animals", to: "api/v1/animals#create"
+  # get "/api/v1/animals/start", to: "api/v1/animals#start"
+  # get "/api/v1/animals/eat_me", to: "api/v1/animals#eat_me"
 
 end
