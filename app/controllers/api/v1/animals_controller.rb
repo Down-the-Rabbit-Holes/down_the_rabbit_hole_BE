@@ -1,11 +1,5 @@
 class Api::V1::AnimalsController < ApplicationController
 
-# def show_home
-# animal = "rabbit"
-
-# animal = Animal.find_by(name: "animal name") || animal.fetch from api
-#  def predator chain
-
   def create
     if params[:action_type] == "start"
       rabbit = Animal.find_by(name: "rabbit")
@@ -19,7 +13,8 @@ class Api::V1::AnimalsController < ApplicationController
 
               AnimalDetail.new(animal_response, photo_response) if animal_response
             end
-         render json: rabbit
+            render json: AnimalSerializer.new(rabbit)
+        #  render json: rabbit
       else
         render json: { error: "Rabbit not found" }, status: :not_found
       end
