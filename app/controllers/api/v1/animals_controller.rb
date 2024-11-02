@@ -12,10 +12,18 @@ class Api::V1::AnimalsController < ApplicationController
           new_animal = AnimalDetail.new(animal_response, photo_response).as_json if animal_response
           Animal.create(new_animal)
         end
-        render json: AnimalSerializer.new(predators_data)
+        render json: AnimalSerializer.new(rabbit)
+        # render json: AnimalSerializer.new(predators_data)
       else
         render json: { error: "Rabbit not found" }, status: :not_found
       end
+    elsif params[:action_type] == "eat_me"
+      # Do something on the EAT ME button click
+      # render json: AnimalSerializer.new(predators_data)
+    elsif params[:action_type] == "animal_select"
+      # Do something on the predator selection click
+        # IF
+      # render json: AnimalSerializer.new(current animal)
     end
   end
 
