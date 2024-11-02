@@ -14,7 +14,6 @@ class Api::V1::AnimalsController < ApplicationController
               AnimalDetail.new(animal_response, photo_response) if animal_response
             end
             render json: AnimalSerializer.new(rabbit)
-        #  render json: rabbit
       else
         render json: { error: "Rabbit not found" }, status: :not_found
       end

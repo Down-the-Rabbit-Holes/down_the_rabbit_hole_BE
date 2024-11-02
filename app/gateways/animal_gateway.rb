@@ -29,9 +29,7 @@ def self.animal_connection
   end
   
   def self.valid_animal?(animals)
-    # selected_animal = 
     animals.find do |animal|
-        # require 'pry'; binding.pry
     animal[:locations].include?("North-America") &&
     animal.dig(:characteristics, :habitat) &&
     animal.dig(:characteristics, :predators) &&
