@@ -7,3 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Animal.create!(
+    name: "rabbit", 
+    photo_url: "www.pexels.com/photo/close-up-of-rabbit-on-field-247373/", 
+    prey: "Clover, Grass, Crunchy vegetables",
+    predators: "Fox, wolf, owl", 
+    habitat: "forest thickets, meadows and woodland", 
+    scientific_name: "oryctolagus cuniculus"
+    )
