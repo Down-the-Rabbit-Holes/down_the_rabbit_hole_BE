@@ -30,11 +30,17 @@ def self.animal_connection
   
   def self.valid_animal?(animals)
     animals.find do |animal|
-    animal[:locations].include?("North-America") &&
-    animal.dig(:characteristics, :habitat) &&
-    animal.dig(:characteristics, :predators) &&
-    ( animal.dig(:characteristics, :prey) ||
-    animal.dig(:characteristics, :main_prey) )
+      animal[:locations].include?("North-America") &&
+      animal.dig(:characteristics, :habitat) &&
+      animal.dig(:characteristics, :predators) &&
+      (animal.dig(:characteristics, :prey) ||
+      animal.dig(:characteristics, :main_prey)) &&
+      animal.dig(:characteristics, :diet) &&
+      animal.dig(:characteristics, :top_speed) &&
+      animal.dig(:characteristics, :lifespan) &&
+      animal.dig(:characteristics, :weight) &&
+      ("Default PORO fun fact" ||
+      animal.dig(:characteristics, :slogan))
     end
   end
 end
