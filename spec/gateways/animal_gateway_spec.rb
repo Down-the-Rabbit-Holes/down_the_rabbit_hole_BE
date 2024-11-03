@@ -22,7 +22,5 @@ RSpec.describe AnimalGateway do
     it '#fetch_animal_data for animal photo', :vcr do
 
     end
-
   end
-
 end
