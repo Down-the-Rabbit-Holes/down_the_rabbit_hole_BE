@@ -21,3 +21,17 @@ Animal.create!(
     diet: "Herbivore",
     scientific_name: "oryctolagus cuniculus"
     )
+
+Animal.create!(
+    name: "tiger", 
+    photo_url: "www.pexels.com/photo/close-up-of-rabbit-on-field-247373/", 
+    prey: "Clover, Grass, Crunchy vegetables",
+    predators: "Fox, wolf, owl", 
+    habitat: "forest thickets, meadows and woodland",
+    fun_fact: "There are more than 50 different species!",
+    top_speed: "18 miles per hour",
+    life_span: "4-9 years",
+    weight: "0.5-3kg (1.1-6.6lbs)",
+    diet: "Herbivore",
+    scientific_name: "oryctolagus cuniculus"
+    )

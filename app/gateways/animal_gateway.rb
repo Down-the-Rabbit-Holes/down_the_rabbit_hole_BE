@@ -1,6 +1,6 @@
 class AnimalGateway
 
-def self.animal_connection
+  def self.animal_connection
     Faraday.new(url: "https://api.api-ninjas.com") do |faraday|
       faraday.headers["X-Api-Key"] = Rails.application.credentials.ninja_animals[:key]
     end
@@ -32,11 +32,13 @@ def self.animal_connection
     animals.find do |animal|
       animal[:locations].include?("North-America") &&
       animal.dig(:characteristics, :habitat) &&
-      animal.dig(:characteristics, :predators) &&
+      (animal.dig(:characteristics, :predators) ||
+      "Default PORO predator") &&
       (animal.dig(:characteristics, :prey) ||
       animal.dig(:characteristics, :main_prey)) &&
       animal.dig(:characteristics, :diet) &&
-      animal.dig(:characteristics, :top_speed) &&
+      ( "Default PORO statement" ||
+      animal.dig(:characteristics, :top_speed)) &&
       animal.dig(:characteristics, :lifespan) &&
       animal.dig(:characteristics, :weight) &&
       ("Default PORO fun fact" ||
