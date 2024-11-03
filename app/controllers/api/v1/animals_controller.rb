@@ -3,13 +3,14 @@ require 'active_support/inflector'
 class Api::V1::AnimalsController < ApplicationController
 
   def index
-    animal = Animal.find_by(id: param[:id])
     if params[:action_type] == "eat_me"
+      animal = Animal.find_by(name: params[:animal_name])
 
-      animal_predators = rabbit.predators.split(',').map(&:strip).first(3)
-        predators_data = predators.map do |predator_name|
-      # render json: AnimalSerializer.new(predators_data)
-        end
+      predators = animal.predators.split(',').map(&:strip).map(&:singularize).first(3)
+      predators_data = predators.map do |predator_name|
+        Animal.where("name ILIKE '%#{predator_name}%'")
+      end.flatten
+      render json: AnimalSerializer.new(predators_data)
     end
   end
 
@@ -26,8 +27,8 @@ class Api::V1::AnimalsController < ApplicationController
           new_animal = AnimalDetail.new(animal_response, photo_response).as_json if animal_response
           Animal.create(new_animal)
         end
-        # render json: AnimalSerializer.new(animal)
-        render json: AnimalSerializer.new(predators_data)
+        render json: AnimalSerializer.new(animal)
+        # render json: AnimalSerializer.new(predators_data)
       else
         render json: { error: "Animal not found" }, status: :not_found
       end
