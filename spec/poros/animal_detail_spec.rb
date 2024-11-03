@@ -26,4 +26,21 @@ RSpec.describe AnimalDetail do
       expect(animal.scientific_name).to eq("Oryctolagus cuniculus")
     end
   end
+
+  describe "initialize with null values" do
+    let(:animal_data) { JSON.parse(File.read('spec/fixtures/animal_fixtures/null_animal_data.json'), symbolize_names: true) }
+    let(:photo_data) { JSON.parse(File.read('spec/fixtures/animal_fixtures/null_photo_data.json'), symbolize_names: true) }
+    let(:animal) { AnimalDetail.new(animal_data, photo_data) }
+
+    it 'assigns default values to characteristics' do
+      expect(animal.predators).to eq("Human")
+      expect(animal.habitat).to eq("Ask your parents!")
+      expect(animal.fun_fact).to eq("Do not pet this animal in the wild!")
+      expect(animal.top_speed).to eq("Ask your parents!")
+      expect(animal.life_span).to eq("Ask your parents!")
+      expect(animal.weight).to eq("Ask your parents!")
+      expect(animal.diet).to eq("Ask your parents!")
+      expect(animal.scientific_name).to eq("Ask your parents!")
+    end
+  end
 end
