@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.api-ninjas.com/v1/animals?name=rabbit
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<ANIMAL_API_KEY>"
+      User-Agent:
+      - Faraday v2.12.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1808'
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 03 Nov 2024 22:53:27 GMT
+      X-Amzn-Trace-Id:
+      - Root=1-6727fee7-2b7fab061c3f828c65c70b72;Parent=001648f56be5d259;Sampled=0;Lineage=1:09d9c399:0
+      X-Amzn-Requestid:
+      - c00ef7f6-4506-4b8c-9775-4c3acf82be40
+      Access-Control-Allow-Origin:
+      - "*"
+      Allow:
+      - GET, OPTIONS, POST
+      Access-Control-Allow-Headers:
+      - "*"
+      X-Amz-Apigw-Id:
+      - AsTENFr_PHcEdbg=
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS, POST
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 cef95c13f18c85adb4a10ae72f19bf38.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-P1
+      X-Amz-Cf-Id:
+      - lRZwCqM1FSHyH7ecW22w-UeaeiOwYqrCM43byE902SWa4GJqXU8Wxw==
+    body:
+      encoding: UTF-8
+      string: '[{"name": "Jackrabbit", "taxonomy": {"kingdom": "Animalia", "phylum":
+        "Chordata", "class": "Mammalia", "order": "Lagomorpha", "family": "Leporidae",
+        "genus": "Lepus", "scientific_name": "Lepus californicus"}, "locations": ["Central-America",
+        "North-America"], "characteristics": {"prey": "Grass, twigs, bark", "name_of_young":
+        "Leveret", "group_behavior": "Solitary", "biggest_threat": "Habitat loss",
+        "most_distinctive_feature": "Long ears", "other_name(s)": "hare", "gestation_period":
+        "41-47 days", "litter_size": "one to six", "habitat": "Desert, savanna, grassland",
+        "predators": "coyotes, red-tailed hawks, bobcats", "diet": "Herbivore", "type":
+        "mammal", "common_name": "Black-tailed jackrabbit", "number_of_species": "6",
+        "location": "United States, Mexico", "group": "solitary", "color": "BrownBlackWhite",
+        "skin_type": "Fur", "top_speed": "45 mph", "lifespan": "five to eight years",
+        "weight": "three to six pounds", "length": "up to two feet", "age_of_sexual_maturity":
+        "243 days", "age_of_weaning": "14 to 21 days"}}, {"name": "Rabbit", "taxonomy":
+        {"kingdom": "Animalia", "phylum": "Chordata", "class": "Mammalia", "order":
+        "Lagomorpha", "family": "Leporidae", "genus": "Oryctolagus", "scientific_name":
+        "Oryctolagus cuniculus"}, "locations": ["Africa", "Asia", "Eurasia", "Europe",
+        "North-America"], "characteristics": {"main_prey": "Clover, Grass, Crunchy
+        vegetables", "habitat": "Forest thickets, meadows and woodland", "predators":
+        "Foxes, wolves, bobcats, eagles, owls, coyotes", "diet": "Herbivore", "average_litter_size":
+        "6", "lifestyle": "Group", "favorite_food": "Clover", "type": "Mammal", "slogan":
+        "There are more than 50 different species!", "color": "BrownGreyBlackWhiteTan",
+        "skin_type": "Fur", "top_speed": "2.4 mph", "lifespan": "4-9 years", "weight":
+        "0.5-3kg (1.1-6.6lbs)"}}]'
+  recorded_at: Sun, 03 Nov 2024 22:53:27 GMT
+recorded_with: VCR 6.3.1
