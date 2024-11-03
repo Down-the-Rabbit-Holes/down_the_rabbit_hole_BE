@@ -38,4 +38,11 @@ class Animal < ApplicationRecord
         Animal.create(new_animal)
       end
     end
+
+    def prey_with_data
+      prey_items = self.prey.split(',').map(&:strip).map(&:singularize).first(3)
+      prey_data = prey_items.flat_map do |prey_name|
+        Animal.where("name ILIKE ?", "%#{prey_name}%").limit(1) 
+      end
+    end
 end

@@ -12,6 +12,10 @@ class Api::V1::AnimalsController < ApplicationController
       # end.flatten
       predators_data = animal.predators_with_data
       render json: AnimalSerializer.new(predators_data)
+    elsif params[:action_type] == "me_eat"
+      animal = Animal.find_by(name: params[:animal_name])
+      prey_data = animal.prey_with_data
+      render json: AnimalSerializer.new(prey_data)
     end
   end
 
