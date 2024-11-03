@@ -30,7 +30,7 @@ class AnimalGateway
   
   def self.valid_animal?(animals)
     animals.find do |animal|
-      animal[:locations].include?("North-America") &&
+    #   animal[:locations].include?("North-America") &&
       animal.dig(:characteristics, :habitat) &&
       (animal.dig(:characteristics, :predators) ||
       "Default PORO predator") &&
