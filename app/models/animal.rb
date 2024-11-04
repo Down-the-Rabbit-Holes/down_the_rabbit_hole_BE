@@ -23,6 +23,10 @@ class Animal < ApplicationRecord
       end
     end
 
+    def self.find_animal(params)
+      require 'pry'; binding.pry
+      Animal.where("name ILIKE ?", "%#{params[:name]}%")
+    end
     # def create_predators_data
     #   predators_with_data.each do |predator|
     #     animal_response = AnimalGateway.fetch_animal_data(predator.name)
