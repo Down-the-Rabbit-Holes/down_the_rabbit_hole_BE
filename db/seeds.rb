@@ -63,3 +63,11 @@ Animal.create!(
     weight: "29-90kg (64-198lbs)",
     diet: "Carnivore"
     )
+
+    User.create!(
+        name: "Jim"
+    )
+
+    User.create!(
+        name: "Candice"
+    )

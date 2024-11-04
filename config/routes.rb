@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   post "/api/v1/animals", to: "api/v1/animals#create"
   # get "/api/v1/animals/start", to: "api/v1/animals#start"
   # get "/api/v1/animals/eat_me", to: "api/v1/animals#eat_me"
-
+  post "/api/v1/user_favorites",  to: "api/v1/user_favorites#create"
 end

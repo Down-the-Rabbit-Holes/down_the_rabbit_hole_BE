@@ -7,6 +7,8 @@ class Api::V1::AnimalsController < ApplicationController
       animal = Animal.find_by(name: params[:animal_name])
       predators_data = animal.predators_with_data
       render json: AnimalSerializer.new(predators_data)
+    else
+      render json: { error: "Animal not found" }, status: :not_found
     end
   end
 
