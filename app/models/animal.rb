@@ -16,30 +16,20 @@ class Animal < ApplicationRecord
             presence: true
 
 
-    def predators_with_data
-      predators = self.predators.split(',').map(&:strip).map(&:singularize)
-      predators_data = predators.flat_map do |predator_name|
-        Animal.where("name ILIKE ?", "%#{predator_name}%")
-      end
+  def predators_with_data
+    predators = self.predators.split(',').map(&:strip).map(&:singularize)
+    predators_data = predators.flat_map do |predator_name|
+      Animal.where("name ILIKE ?", "%#{predator_name}%")
     end
+  end
 
-    def self.find_animal(params)
-      require 'pry'; binding.pry
-      Animal.where("name ILIKE ?", "%#{params[:name]}%")
+  def self.find_animal(params)
+    animal = Animal.where("name ILIKE ?", "%#{params[:name]}%")
+  end
+
+  def self.format_predators(animal)
+    predators = animal.flat_map do |animal|
+      animal.predators.gsub(/\band\b/, '').split(', ').map(&:strip).map(&:singularize)
     end
-    # def create_predators_data
-    #   predators_with_data.each do |predator|
-    #     animal_response = AnimalGateway.fetch_animal_data(predator.name)
-    #     photo_response = AnimalGateway.fetch_photo_data(predator.name)
-    #     new_animal = AnimalDetail.new(animal_response, photo_response).as_json if animal_response
-    #     Animal.create(new_animal)
-    #   end
-    # end
-
-    # def prey_with_data
-    #   prey_items = self.prey.split(',').map(&:strip).map(&:singularize).first(3)
-    #   prey_data = prey_items.flat_map do |prey_name|
-    #     Animal.where("name ILIKE ?", "%#{prey_name}%").limit(1) 
-    #   end
-    # end
+  end
 end

@@ -16,13 +16,17 @@ class AnimalDetail
     @photo_url = photo_data[:photos].first[:url]
     @prey = (animal_data.dig(:characteristics, :main_prey) || animal_data.dig(:characteristics, :prey))
     @predators = (animal_data.dig(:characteristics, :predators) || "Human")
-    @habitat = (animal_data.dig(:characteristics, :habitat) || "Ask your parents!")
+    @habitat = (animal_data.dig(:characteristics, :habitat) || default_message)
     @fun_fact = (animal_data.dig(:characteristics, :slogan) || "Do not pet this animal in the wild!")
-    @top_speed = (animal_data.dig(:characteristics, :top_speed) || "Ask your parents!")
-    @life_span = (animal_data.dig(:characteristics, :lifespan) || "Ask your parents!")
-    @weight = (animal_data.dig(:characteristics, :weight) || "Ask your parents!")
-    @diet = (animal_data.dig(:characteristics, :diet) || "Ask your parents!")
-    @scientific_name = (animal_data.dig(:taxonomy, :scientific_name) || "Ask your parents!")
+    @top_speed = (animal_data.dig(:characteristics, :top_speed) || default_message)
+    @life_span = (animal_data.dig(:characteristics, :lifespan) || default_message)
+    @weight = (animal_data.dig(:characteristics, :weight) || default_message)
+    @diet = (animal_data.dig(:characteristics, :diet) || default_message)
+    @scientific_name = (animal_data.dig(:taxonomy, :scientific_name) || default_message)
+  end
+
+  def default_message
+    "Ask your parents!"
   end
 end
 
