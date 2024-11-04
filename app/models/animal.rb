@@ -15,24 +15,14 @@ class Animal < ApplicationRecord
             :fun_fact,
             presence: true
 
-    # def predators_with_data
-    #   predators = self.predators.split(',').map(&:strip).map(&:singularize).first(3)
-    #   predators_data = predators.map do |predator_name|
-    #     Animal.where("name ILIKE '%#{predator_name}%'")
-    #   end.flatten
-    # end
 
     def predators_with_data
-      predators = self.predators.split(',').map(&:strip).map(&:singularize)#.first(3)
+      predators = self.predators.split(',').map(&:strip).map(&:singularize)
       predators_data = predators.flat_map do |predator_name|
-        Animal.where("name ILIKE ?", "%#{predator_name}%")#.limit(1) 
+        Animal.where("name ILIKE ?", "%#{predator_name}%")
       end
     end
 
-    def self.clean_up_predators_list
-      # animal.predators.gsub(/\band\b/, '').squeeze(" ").split(', ')
-      self.predators.gsub(/\band\b/, '').split(', ').map(&:strip).map(&:singularize)
-    end
     # def create_predators_data
     #   predators_with_data.each do |predator|
     #     animal_response = AnimalGateway.fetch_animal_data(predator.name)
