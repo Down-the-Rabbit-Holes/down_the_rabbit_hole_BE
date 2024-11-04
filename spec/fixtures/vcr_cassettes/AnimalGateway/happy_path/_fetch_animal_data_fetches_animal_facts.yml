@@ -27,11 +27,11 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 04 Nov 2024 02:02:50 GMT
+      - Mon, 04 Nov 2024 02:32:26 GMT
       X-Amzn-Trace-Id:
-      - Root=1-67282b4a-2c6b6d8f443047283561d8a6;Parent=56cdc5f630d9fd2b;Sampled=0;Lineage=1:09d9c399:0
+      - Root=1-6728323a-7546ba964bf500403c94d557;Parent=4d3ce1b653ae88fb;Sampled=0;Lineage=1:09d9c399:0
       X-Amzn-Requestid:
-      - 5f000a63-18ad-4a0f-a437-18af05b17c39
+      - 2d389c33-37b8-4f44-a36c-2ca08f8655d9
       Access-Control-Allow-Origin:
       - "*"
       Allow:
@@ -39,17 +39,17 @@ http_interactions:
       Access-Control-Allow-Headers:
       - "*"
       X-Amz-Apigw-Id:
-      - AsuzqFwoPHcEC-w=
+      - AszJIHHhPHcEbQg=
       Access-Control-Allow-Methods:
       - GET, OPTIONS, POST
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 a1fb8be6c85edc28c20536da81db5204.cloudfront.net (CloudFront)
+      - 1.1 a827400055d7bbab6e387896737d4e50.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN52-P1
       X-Amz-Cf-Id:
-      - mit9iOkusH0RrNcBYZAQM3sC0BM06KnfVShjjXQXnGxxqxrJb3Wy8g==
+      - lr6oEMoKICgntvxE309TW3E_9XHaP4t6N_5cKhpdU2E-KJ6Pkm0l_Q==
     body:
       encoding: UTF-8
       string: '[{"name": "Rabbit", "taxonomy":
@@ -63,5 +63,5 @@ http_interactions:
         "There are more than 50 different species!", "color": "BrownGreyBlackWhiteTan",
         "skin_type": "Fur", "top_speed": "2.4 mph", "lifespan": "4-9 years", "weight":
         "0.5-3kg (1.1-6.6lbs)"}}]'
-  recorded_at: Mon, 04 Nov 2024 02:02:50 GMT
+  recorded_at: Mon, 04 Nov 2024 02:32:26 GMT
 recorded_with: VCR 6.3.1
