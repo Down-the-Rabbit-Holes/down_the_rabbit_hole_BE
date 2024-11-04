@@ -1,0 +1,15 @@
+{
+  "name": "Rabbit",
+  "characteristics": {
+    "predators": null,
+    "habitat": null,
+    "slogan": null,
+    "top_speed": null,
+    "lifespan": null,
+    "weight": null,
+    "diet": null
+  },
+  "taxonomy": {
+    "scientific_name": null
+  }
+}
