@@ -26,14 +26,15 @@ class Api::V1::AnimalsController < ApplicationController
       animal = Animal.find_or_initialize_by(name: params[:animal_name] || "rabbit")
 
       if animal.persisted?
-        # predators = animal.predators.split(',').map(&:strip).map(&:singularize).first(3)
-        # predators_data = predators.map do |predator_name|
-        #   animal_response = AnimalGateway.fetch_animal_data(predator_name)
-        #   photo_response = AnimalGateway.fetch_photo_data(predator_name)
-        #   new_animal = AnimalDetail.new(animal_response, photo_response).as_json if animal_response
-        #   Animal.create(new_animal)
-        # end
-        animal.create_predators_data
+        predators = animal.predators.gsub(/\band\b/, '').split(', ').map(&:strip).map(&:singularize)#.first(3)
+        require 'pry'; binding.pry
+        predators_data = predators.map do |predator_name|
+          animal_response = AnimalGateway.fetch_animal_data(predator_name)
+          photo_response = AnimalGateway.fetch_photo_data(predator_name)
+          new_animal = AnimalDetail.new(animal_response, photo_response).as_json if animal_response
+          Animal.create(new_animal)
+        end
+        # animal.create_predators_data
         render json: AnimalSerializer.new(animal)
         # render json: AnimalSerializer.new(predators_data)
       else
