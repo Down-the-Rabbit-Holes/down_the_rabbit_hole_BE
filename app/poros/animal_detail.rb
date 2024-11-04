@@ -25,6 +25,8 @@ class AnimalDetail
     @scientific_name = (animal_data.dig(:taxonomy, :scientific_name) || default_message)
   end
 
+  private
+
   def default_message
     "Ask your parents!"
   end
