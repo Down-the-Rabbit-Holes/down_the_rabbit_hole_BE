@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.api-ninjas.com/v1/animals?name=Rabbit
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<ANIMAL_API_KEY>"
+      User-Agent:
+      - Faraday v2.12.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1808'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 04 Nov 2024 02:32:26 GMT
+      X-Amzn-Trace-Id:
+      - Root=1-6728323a-7546ba964bf500403c94d557;Parent=4d3ce1b653ae88fb;Sampled=0;Lineage=1:09d9c399:0
+      X-Amzn-Requestid:
+      - 2d389c33-37b8-4f44-a36c-2ca08f8655d9
+      Access-Control-Allow-Origin:
+      - "*"
+      Allow:
+      - GET, OPTIONS, POST
+      Access-Control-Allow-Headers:
+      - "*"
+      X-Amz-Apigw-Id:
+      - AszJIHHhPHcEbQg=
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS, POST
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 a827400055d7bbab6e387896737d4e50.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-P1
+      X-Amz-Cf-Id:
+      - lr6oEMoKICgntvxE309TW3E_9XHaP4t6N_5cKhpdU2E-KJ6Pkm0l_Q==
+    body:
+      encoding: UTF-8
+      string: '[{"name": "Rabbit", "taxonomy":
+        {"kingdom": "Animalia", "phylum": "Chordata", "class": "Mammalia", "order":
+        "Lagomorpha", "family": "Leporidae", "genus": "Oryctolagus", "scientific_name":
+        "Oryctolagus cuniculus"}, "locations": ["Africa", "Asia", "Eurasia", "Europe",
+        "North-America"], "characteristics": {"main_prey": "Clover, Grass, Crunchy
+        vegetables", "habitat": "Forest thickets, meadows and woodland", "predators":
+        "Foxes, wolves, bobcats, eagles, owls, coyotes", "diet": "Herbivore", "average_litter_size":
+        "6", "lifestyle": "Group", "favorite_food": "Clover", "type": "Mammal", "slogan":
+        "There are more than 50 different species!", "color": "BrownGreyBlackWhiteTan",
+        "skin_type": "Fur", "top_speed": "2.4 mph", "lifespan": "4-9 years", "weight":
+        "0.5-3kg (1.1-6.6lbs)"}}]'
+  recorded_at: Mon, 04 Nov 2024 02:32:26 GMT
+recorded_with: VCR 6.3.1
