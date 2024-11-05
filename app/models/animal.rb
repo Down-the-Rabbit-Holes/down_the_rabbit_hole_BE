@@ -30,10 +30,12 @@ class Animal < ApplicationRecord
   def self.handle_predator_creation(animal)
     predators = Animal.format_predators(animal)
     predators_data = predators.map do |predator_name|
-      animal_response = AnimalGateway.fetch_animal_data(predator_name)
-      photo_response = AnimalGateway.fetch_photo_data(predator_name)
-      new_animal = AnimalDetail.new(animal_response, photo_response).as_json if animal_response
-      Animal.create(new_animal)
+      if (!animal_exists(predator_name))
+        animal_response = AnimalGateway.fetch_animal_data(predator_name)
+        photo_response = AnimalGateway.fetch_photo_data(predator_name)
+        new_animal = AnimalDetail.new(animal_response, photo_response).as_json if animal_response
+        Animal.create(new_animal)
+      end
     end
   end
 
@@ -43,5 +45,10 @@ class Animal < ApplicationRecord
     predators = animal.flat_map do |animal|
       animal.predators.gsub(/\band\b/, '').split(', ').map(&:strip).map(&:singularize)
     end
+  end
+
+  def self.animal_exists(animal)
+    valid_animal = Animal.where("name ILIKE ?", "%#{animal}%")
+    valid_animal.empty?
   end
 end

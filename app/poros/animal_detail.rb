@@ -13,7 +13,7 @@ class AnimalDetail
 
   def initialize (animal_data, photo_data)
     @name = animal_data[:name]
-    @photo_url = photo_data[:photos].first[:url]
+    @photo_url = photo_data[:photos].first[:src][:large]
     @prey = (animal_data.dig(:characteristics, :main_prey) || animal_data.dig(:characteristics, :prey))
     @predators = (animal_data.dig(:characteristics, :predators) || "Human")
     @habitat = (animal_data.dig(:characteristics, :habitat) || default_message)
@@ -31,4 +31,3 @@ class AnimalDetail
     "Ask your parents!"
   end
 end
-
