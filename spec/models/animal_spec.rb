@@ -8,6 +8,7 @@ RSpec.describe Animal, type: :model do
 
   describe 'validations' do
     it { should validate_presence_of(:name) }
+    it { should validate_uniqueness_of(:name) }
     it { should validate_presence_of(:photo_url) }
     it { should validate_presence_of(:prey) }
     it { should validate_presence_of(:predators) }

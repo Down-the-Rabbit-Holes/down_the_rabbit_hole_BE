@@ -6,8 +6,10 @@ RSpec.describe AnimalDetail do
     let(:photo_data) { JSON.parse(File.read('spec/fixtures/animal_fixtures/rabbit_photo_data.json'), symbolize_names: true) }
     let(:animal) { AnimalDetail.new(animal_data, photo_data) }
 
+    # binding.pry
     it 'initializes with name' do
       expect(animal.name).to eq("Rabbit")
+
     end
 
     it 'initializes with photo_url' do

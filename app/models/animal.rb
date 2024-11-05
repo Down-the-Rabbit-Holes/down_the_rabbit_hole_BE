@@ -3,7 +3,8 @@ class Animal < ApplicationRecord
   has_many :users, through: :user_favorites
   
   validates :name, uniqueness: true
-  validates :photo_url, 
+  validates :name,
+            :photo_url, 
             :prey, 
             :predators, 
             :habitat, 
