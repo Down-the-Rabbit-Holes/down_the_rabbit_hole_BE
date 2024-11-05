@@ -71,3 +71,8 @@ Animal.create!(
     User.create!(
         name: "Candice"
     )
+
+    UserFavorite.create!(
+        animal_id: 1,
+        user_id: 1
+    )
