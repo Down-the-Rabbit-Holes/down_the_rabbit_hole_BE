@@ -24,7 +24,7 @@ Animal.create!(
 
 Animal.create!(
     name: "Coyote", 
-    photo_url: "www.pexels.com/photo/two-playful-coyotes-27067820/", 
+    photo_url: "https://images.pexels.com/photos/23511068/pexels-photo-23511068/free-photo-of-close-up-of-a-coyote-standing-on-a-field.jpeg?auto=compress&cs=tinysrgb&w=600", 
     prey: "Rabbit, Mice, Deer",
     predators: "Human, Bears, Wolves, Great horned owls, Bald Eagles", 
     habitat: "Forests, plains and deserts",
@@ -38,7 +38,7 @@ Animal.create!(
 
 Animal.create!(
     name: "Barred Owl",
-    photo_url: "www.pexels.com/photo/brown-and-black-owl-staring-86596/",
+    photo_url: "https://images.pexels.com/photos/12755682/pexels-photo-12755682.jpeg?auto=compress&cs=tinysrgb&w=600",
     prey: "Mammals, including house mice and rabbits, other birds, amphibians, reptiles, insects and other invertebrates and even fish.",
     predators: "Raccoons, weasels, great horned owls, humans",
     habitat: "Forests, especially old growth forests near bodies of water, wooded swamps",
@@ -52,7 +52,7 @@ Animal.create!(
 
 Animal.create!(
     name: "Mountain Lion",
-    photo_url: "https://www.pexels.com/photo/cougar-animal-53001/",
+    photo_url: "https://images.pexels.com/photos/53001/cougar-mountain-lion-puma-concolor-big-cat-53001.jpeg?auto=compress&cs=tinysrgb&w=600",
     prey: "Deer, Elk, Beavers",
     predators: "Human, Grizzly Bear, Wolves, Jaguars",
     habitat: "Forest and mountainous regions",
