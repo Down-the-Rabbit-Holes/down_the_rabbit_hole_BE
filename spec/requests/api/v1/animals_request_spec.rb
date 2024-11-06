@@ -9,8 +9,8 @@ RSpec.describe "Animals", type: :request do
 
       expect(response).to be_successful
 
+      # binding.pry
       animals = JSON.parse(response.body, symbolize_names: true)[:data]
-      binding.pry
       expect(animals.size).to eq(2)
       animals.each do |animal|
         expect(animal).to have_key(:id)
