@@ -10,7 +10,7 @@
 
 Animal.create!(
     name: "rabbit", 
-    photo_url: "www.pexels.com/photo/close-up-of-rabbit-on-field-247373/", 
+    photo_url: "https://images.pexels.com/photos/326012/pexels-photo-326012.jpeg", 
     prey: "Clover, Grass, Crunchy vegetables",
     predators: "Fox, wolf, owl, bobcat, weasel, stoat, hawk", 
     habitat: "forest thickets, meadows and woodland",
