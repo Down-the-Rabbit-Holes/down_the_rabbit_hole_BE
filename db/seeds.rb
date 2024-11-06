@@ -63,3 +63,17 @@ Animal.create!(
     weight: "29-90kg (64-198lbs)",
     diet: "Carnivore"
     )
+
+    Animal.create!(
+    name: "Corn Snake",
+    photo_url: "https://images.pexels.com/photos/15799789/pexels-photo-15799789.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    prey: "Rats, Mice, Baby birds, Eggs",
+    predators: "Hawks, Eagles, Foxes, other snakes, Coyotes, Bobcats",
+    habitat: "Forested areas, fields, swamps, hardwood hammocks, neighborhoods bordering habitat",
+    scientific_name: "P. guttatus",
+    fun_fact: "Corn snakes have scales on their backs that help them camouflage in leaf litter.",
+    top_speed: "18 mph",
+    life_span: "15 years in captivity, less in the wild",
+    weight: "29-90kg (64-198lbs)",
+    diet: "Carnivore"
+    )
