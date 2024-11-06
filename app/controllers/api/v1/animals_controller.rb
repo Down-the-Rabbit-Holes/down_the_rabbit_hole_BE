@@ -1,5 +1,3 @@
-require 'active_support/inflector'
-
 class Api::V1::AnimalsController < ApplicationController
 
   def index
