@@ -107,7 +107,51 @@ RSpec.describe "UserFavorites", type: :request do
       parsed_body = JSON.parse(response.body)
 
       expect(parsed_body["error"]).to eq("Unable to save favorite")
+    end
+  end
 
+  describe "DELETE /destroy" do
+    before(:each) do
+      @user = User.create!(name: "first_user")
+      @animal = Animal.create!(
+        name: "Coyote", 
+        photo_url: "www.pexels.com/photo/two-playful-coyotes-27067820/", 
+        prey: "Rabbit, Mice, Deer",
+        predators: "Human, Bears, Wolves, Great horned owls, Bald Eagles", 
+        habitat: "Forests, plains and deserts",
+        fun_fact: "Also known as the Prairie Wolf!",
+        top_speed: "40 miles per hour",
+        life_span: "10 - 15 years",
+        weight: "7kg - 21kg (15lbs - 46lbs)",
+        diet: "Carnivore",
+        scientific_name: "Canis latrans"
+        )
+
+        @user_favorite = UserFavorite.create!(user_id: @user.id, animal_id: @animal.id)
+    end
+
+    it 'deletes a favorite' do
+      expect(UserFavorite.count).to eq(1)
+
+      delete "/api/v1/users/#{@user.id}/user_favorites/#{@animal.id}"
+
+      expect(UserFavorite.count).to eq(0)
+      expect(response).to have_http_status(:ok)
+
+      parsed_body = JSON.parse(response.body)
+
+      expect(parsed_body["message"]).to eq("Favorite removed")
+    end
+
+    it 'returns an error message if favorite is not found' do
+      @user_favorite.destroy
+
+      delete "/api/v1/users/#{@user.id}/user_favorites/#{@animal.id}"
+
+      expect(response).to have_http_status(:not_found)
+
+      parsed_body = JSON.parse(response.body)
+      expect(parsed_body["error"]).to eq("Favorite not found")
     end
   end
 end
