@@ -1,33 +1,48 @@
 require 'active_support/inflector'
 
 class Api::V1::UserFavoritesController < ApplicationController
+  before_action :set_user
+  before_action :set_animal, only: [:create, :destroy]
 
   def index
-    user = User.find(params[:user_id])
-    favorited_animals = user.animals
-
-    render json: favorited_animals, status: :ok
+    favorited_animals = @user.animals
+    if favorited_animals.empty?
+      render json: { error: "No favorites yet" }, status: :not_found
+    else
+      render json: favorited_animals, status: :ok
+    end
   end
 
   def create
-    user = User.find(params[:user_id])
-    favorite_animal = Animal.find(params[:animal_id])
-    
-    user_favorite = UserFavorite.new(user_id: params[:user_id], animal_id: params[:animal_id])
+    user_favorite = UserFavorite.new(user_id: @user.id, animal_id: @animal.id)
     
     if user_favorite.save
-      render json: favorite_animal, status: :created
+      render json: @animal, status: :created
     else
-      render json: { error: "test" }, status: :unprocessable_entity
-      # if user has a favorite animal- json render animal
+      render json: { error: "Unable to save favorite" }, status: :unprocessable_entity
+    end
   end
-  # check for duplicates?
-  # if user_favorite == favorite_animal && user?
-    # render json: {message similar to FE duplicate message, status:????
-  # else 
-    # create the favorite and render success message similar to FE, status: :created
-    
-    # what is going to render? we need to render any animal that the user has.
-    # if user_favorite.save? then were gonna 
+
+  def destroy
+    user_favorite = UserFavorite.find_by(user_id: @user.id, animal_id: @animal.id)
+
+    if user_favorite
+      user_favorite.destroy
+      render json: { message: "Favorite removed" }, status: :ok
+    else
+      render json: { error: "Favorite not found" }, status: :not_found
+    end
   end
+
+  private
+
+  def set_user
+    @user = User.find(params[:user_id])
+  end
+
+  def set_animal
+    @animal = Animal.find(params[:animal_id])
+  end
+
 end
+

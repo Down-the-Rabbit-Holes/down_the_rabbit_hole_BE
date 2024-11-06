@@ -1,5 +1,3 @@
-require 'active_support/inflector'
-
 class Api::V1::AnimalsController < ApplicationController
 
   def index
@@ -28,3 +26,4 @@ class Api::V1::AnimalsController < ApplicationController
     params.require(:animal).permit(:name, :action_type)
   end
 end
+
