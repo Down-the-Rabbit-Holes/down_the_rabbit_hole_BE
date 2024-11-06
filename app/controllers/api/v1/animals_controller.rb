@@ -11,6 +11,7 @@ class Api::V1::AnimalsController < ApplicationController
   def create
     if params[:action_type] == "start" || params[:action_type] == "selected_animal"
       animal = Animal.find_animal(animal_params)
+      binding.pry
       if animal
         Animal.handle_predator_creation(animal)
         render json: AnimalSerializer.new(animal)

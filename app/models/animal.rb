@@ -43,9 +43,12 @@ class Animal < ApplicationRecord
   # private
 
   def self.format_predators(animal)
-    predators = animal.flat_map do |animal|
-      animal.predators.gsub(/\band\b/, '').split(', ').map(&:strip).map(&:singularize)
-    end
+    predators = animal.predators.gsub(/\band\b/, '').split(', ').map(&:strip).map(&:singularize)
+        # Had to refactor here. In testing I discovered that calling flat_map on animal was failing
+        # b/c animal is an object and flat_map is an array method -SJB
+    # predators = animal.flat_map do |animal|
+    #   animal.predators.gsub(/\band\b/, '').split(', ').map(&:strip).map(&:singularize)
+    # end
   end
 
   # def self.animal_exists(animal)
