@@ -19,16 +19,7 @@ class Api::V1::UserFavoritesController < ApplicationController
       render json: favorite_animal, status: :created
     else
       render json: { error: "test" }, status: :unprocessable_entity
-      # if user has a favorite animal- json render animal
-  end
-  # check for duplicates?
-  # if user_favorite == favorite_animal && user?
-    # render json: {message similar to FE duplicate message, status:????
-  # else 
-    # create the favorite and render success message similar to FE, status: :created
-    
-    # what is going to render? we need to render any animal that the user has.
-    # if user_favorite.save? then were gonna 
+    end
   end
 end
 
