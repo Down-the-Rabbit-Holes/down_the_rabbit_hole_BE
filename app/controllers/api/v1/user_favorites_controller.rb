@@ -17,12 +17,12 @@ class Api::V1::UserFavoritesController < ApplicationController
     user = User.find(params[:user_id])
     favorite_animal = Animal.find(params[:animal_id])
     
-    user_favorite = UserFavorite.new(user_id: :user.id, animal_id: :favortie_animal.id)
+    user_favorite = UserFavorite.new(user_id: user.id, animal_id: favorite_animal.id)
     
     if user_favorite.save
       render json: favorite_animal, status: :created
     else
-      render json: { error: "test" }, status: :unprocessable_entity
+      render json: { error: "Unable to save favorite" }, status: :unprocessable_entity
     end
   end
 end
