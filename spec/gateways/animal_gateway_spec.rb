@@ -18,7 +18,7 @@ RSpec.describe AnimalGateway do
       expect(animal_data[:taxonomy][:scientific_name]).to eq("Oryctolagus cuniculus")
     end
 
-    it '#fetch_animal_data fetches animal photo', :vcr do
+    it '#fetch_photo_data fetches animal photo', :vcr do
       animal_pic = AnimalGateway.fetch_photo_data("Rabbit")
 
       expect(animal_pic).to be_a Hash
