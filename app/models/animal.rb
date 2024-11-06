@@ -16,7 +16,6 @@ class Animal < ApplicationRecord
             :fun_fact,
             presence: true
 
-
   def predators_with_data
     predators = self.predators.split(',').map(&:strip).map(&:singularize)
     predators_data = predators.flat_map do |predator_name|
