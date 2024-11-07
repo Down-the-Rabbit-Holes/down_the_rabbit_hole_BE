@@ -28,7 +28,7 @@ class Animal < ApplicationRecord
   end
 
   def self.handle_predator_creation(animal)
-    require 'pry'; binding.pry
+    # require 'pry'; binding.pry
     predators = format_predators(animal)
     predators_data = predators.map do |predator_name|
       # if (!animal_exists(predator_name))
