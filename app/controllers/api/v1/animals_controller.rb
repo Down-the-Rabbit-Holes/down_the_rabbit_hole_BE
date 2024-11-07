@@ -27,4 +27,3 @@ class Api::V1::AnimalsController < ApplicationController
     params.require(:animal).permit(:name, :action_type)
   end
 end
-

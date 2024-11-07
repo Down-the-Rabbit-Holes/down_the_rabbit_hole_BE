@@ -73,13 +73,13 @@ RSpec.describe Animal, type: :model do
       expect(no_preds).to eq([])
     end
 
-    it '#self.find_animal(params) finds an animal & returns it as nested object' do
+    it '#self.find_animal finds an animal & returns it as nested object' do
       result = Animal.find_animal(name: "TeSt_1")
 
       expect(result).to eq([@test_animal_1])
     end
 
-    it '#def self.format_predators(animal) arrays & formats an animals predators' do
+    it '#def self.format_predators arrays & formats an animals predators' do
       before_method = @test_animal_2.predators
 
       expect(before_method).to eq("Hawks, Eagles, Foxes, other snakes, Coyotes, Bobcats")
@@ -89,34 +89,26 @@ RSpec.describe Animal, type: :model do
       expect(after_method).to eq(["Hawk", "Eagle", "Fox", "other snake", "Coyote", "Bobcat"])
     end
 
-    it '#self.handle_predator_creation(animal) creates new animals unless it exists' do
-      allow(AnimalGateway).to receive(:fetch_animal_data).and_return({
-          name: "new pred",
-          photo_url: "https://images.pexels.com/photos/TEST",
-          prey: "not the above two ones thats for sure",
-          predators: "Raccoons, weasels, great horned owls, humans",
-          habitat: "Forests, especially old growth forests near bodies of water, wooded swamps",
-          scientific_name: "Strix varia",
-          fun_fact: "Barred owls are active during the day, which is unusual for owls.",
-          top_speed: "30 mph",
-          life_span: "18 years",
-          weight: "Males weigh 1 to 1.8 pounds, females weigh about 1.8 to 2 pounds",
-          diet: "Carnivore"
-        })
+    it '#self.handle_predator_creation creates new animals unless it exists' do
+      stub_request(:get, "https://api.api-ninjas.com/v1/animals?name=#{@test_animal_1.name}")
+      .to_return(body: { name: "new_pred", predators: "Some predator" }.to_json)
 
-      allow(AnimalGateway).to receive(:fetch_photo_data).and_return({name: "new pred_image"})
-        Animal.handle_predator_creation(@test_animal_1)
+      stub_request(:get, "https://api.pexels.com/v1/search?query=new_pred")
+      .to_return(body: { name: "new_pred_image" }.to_json)
+      Animal.handle_predator_creation(@test_animal_2)
+      
+      new_animal = Animal.find_by(name: "Ferruginous Hawk")
+      expect(new_animal).not_to be_nil
+      expect(new_animal.name).to eq("Ferruginous Hawk")
+    end
 
-        # expect(method_call_2).not_to be_valid
-        new_animal = Animal.find_animal(name: "new_pred")
-        # binding.pry
-        # expect(method_call).to raise Exception("aa")
-        # method_call_2 = Animal.handle_predator_creation(@test_animal_1)
-        # expect(new_animal).to be_an(Array)
+    it '(SADPATH)#self.handle_predator_creation returns an empty array instead of nil' do
+      allow(AnimalGateway).to receive(:fetch_animal_data).and_return(nil)
+      allow(AnimalGateway).to receive(:fetch_photo_data).and_return(nil)
 
-        expect(new_animal.length).to eq(1)
-        expect(new_animal.name).to eq("shithead")
-        # new_animal_2 = Animal.find_animal(name: "test_1")
+      result = Animal.handle_predator_creation(@test_animal_1)
+
+      expect(result).to eq([])
     end
   end
 end

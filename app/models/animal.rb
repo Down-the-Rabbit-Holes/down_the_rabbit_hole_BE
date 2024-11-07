@@ -29,21 +29,25 @@ class Animal < ApplicationRecord
 
   def self.handle_predator_creation(animal)
     predators = Animal.format_predators(animal)
-    predators_data = predators.map do |predator_name|
-      # if (!animal_exists(predator_name))
+    predators_data = predators.each_with_object([]) do |predator_name, created_preds|
+      # each w obj allows us to array up the preds and return at once.  
+      # in case pred_name fails
       unless Animal.where("name ILIKE ?", predator_name).exists?
         animal_response = AnimalGateway.fetch_animal_data(predator_name)
         photo_response = AnimalGateway.fetch_photo_data(predator_name)
-        new_animal = AnimalDetail.new(animal_response, photo_response).as_json if animal_response
-        Animal.create(new_animal)
+        if animal_response && photo_response
+          new_animal = AnimalDetail.new(animal_response, photo_response).as_json
+          created_preds << Animal.create(new_animal)
+        end
       end
     end
+    predators_data
   end
 
   # private
 
   def self.format_predators(animal)
-    predators = animal.predators.gsub(/\band\b/, '').split(', ').map(&:strip).map(&:singularize)
+    animal.predators.gsub(/\band\b/, '').split(', ').map(&:strip).map(&:singularize)
         # Had to refactor here. In testing I discovered that calling flat_map on animal was failing
         # b/c animal is an object and flat_map is an array method -SJB
     # predators = animal.flat_map do |animal|
