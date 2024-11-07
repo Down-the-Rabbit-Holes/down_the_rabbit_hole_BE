@@ -21,10 +21,11 @@ class Animal < ApplicationRecord
     predators_data = predators.flat_map do |predator_name|
       Animal.where("name ILIKE ?", "%#{predator_name}%")
     end
+    predators_data
   end
 
   def self.find_animal(params)
-    animal = Animal.where("name ILIKE ?", "%#{params[:name]}%")
+    where("name ILIKE ?", "%#{params[:name]}%")
   end
 
   def self.handle_predator_creation(animal)
@@ -47,12 +48,12 @@ class Animal < ApplicationRecord
   # private
 
   def self.format_predators(animal)
-    animal.predators.gsub(/\band\b/, '').split(', ').map(&:strip).map(&:singularize)
+    # animal.predators.gsub(/\band\b/, '').split(', ').map(&:strip).map(&:singularize)
         # Had to refactor here. In testing I discovered that calling flat_map on animal was failing
         # b/c animal is an object and flat_map is an array method -SJB
-    # predators = animal.flat_map do |animal|
-    #   animal.predators.gsub(/\band\b/, '').split(', ').map(&:strip).map(&:singularize)
-    # end
+    predators = animal.flat_map do |animal|
+      animal.predators.gsub(/\band\b/, '').split(', ').map(&:strip).map(&:singularize)
+    end
   end
 
   # def self.animal_exists(animal)
