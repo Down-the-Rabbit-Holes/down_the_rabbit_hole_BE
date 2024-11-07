@@ -25,6 +25,7 @@ class Animal < ApplicationRecord
   end
 
   def self.find_animal(params)
+
     where("name ILIKE ?", "%#{params[:name]}%")
   end
 
@@ -34,6 +35,7 @@ class Animal < ApplicationRecord
       # each w obj allows us to array up the preds and return at once.  
       # in case pred_name fails
       unless Animal.where("name ILIKE ?", predator_name).exists?
+
         animal_response = AnimalGateway.fetch_animal_data(predator_name)
         photo_response = AnimalGateway.fetch_photo_data(predator_name)
         if animal_response && photo_response
