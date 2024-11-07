@@ -5,7 +5,7 @@ RSpec.describe "UserFavorites", type: :request do
     before(:each) do
       @user = User.create!(name: "first_user")
       @animal = Animal.create!(
-        name: "Coyote", 
+        name: "test", 
         photo_url: "www.pexels.com/photo/two-playful-coyotes-27067820/", 
         prey: "Rabbit, Mice, Deer",
         predators: "Human, Bears, Wolves, Great horned owls, Bald Eagles", 
@@ -38,7 +38,7 @@ RSpec.describe "UserFavorites", type: :request do
         parsed_body = JSON.parse(response.body)
 
         expect(parsed_body).to be_an(Array)
-        expect(parsed_body.first["name"]).to eq("Coyote")
+        expect(parsed_body.first["name"]).to eq("test")
         expect(parsed_body.first["photo_url"]).to eq("www.pexels.com/photo/two-playful-coyotes-27067820/")
         expect(parsed_body.first["prey"]).to eq("Rabbit, Mice, Deer")
         expect(parsed_body.first["predators"]).to eq("Human, Bears, Wolves, Great horned owls, Bald Eagles")
@@ -57,7 +57,7 @@ RSpec.describe "UserFavorites", type: :request do
     before(:each) do
       @user = User.create!(name: "first_user")
       @animal = Animal.create!(
-        name: "Coyote", 
+        name: "test_1", 
         photo_url: "www.pexels.com/photo/two-playful-coyotes-27067820/", 
         prey: "Rabbit, Mice, Deer",
         predators: "Human, Bears, Wolves, Great horned owls, Bald Eagles", 
@@ -78,7 +78,7 @@ RSpec.describe "UserFavorites", type: :request do
 
       parsed_body = JSON.parse(response.body)
 
-      expect(parsed_body["name"]).to eq("Coyote")
+      expect(parsed_body["name"]).to eq("test_1")
       expect(parsed_body["photo_url"]).to eq("www.pexels.com/photo/two-playful-coyotes-27067820/")
       expect(parsed_body["prey"]).to eq("Rabbit, Mice, Deer")
       expect(parsed_body["predators"]).to eq("Human, Bears, Wolves, Great horned owls, Bald Eagles")
@@ -114,7 +114,7 @@ RSpec.describe "UserFavorites", type: :request do
     before(:each) do
       @user = User.create!(name: "first_user")
       @animal = Animal.create!(
-        name: "Coyote", 
+        name: "test_2", 
         photo_url: "www.pexels.com/photo/two-playful-coyotes-27067820/", 
         prey: "Rabbit, Mice, Deer",
         predators: "Human, Bears, Wolves, Great horned owls, Bald Eagles", 

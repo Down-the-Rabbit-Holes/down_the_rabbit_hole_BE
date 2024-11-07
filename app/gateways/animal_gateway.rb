@@ -3,8 +3,8 @@ class AnimalGateway
   def self.fetch_animal_data(animal_name)
     response = animal_connection.get("/v1/animals?name=#{animal_name}")
     animals = parse_response(response)
-    valid_animal?(animals)
-    
+    valid_animal = valid_animal?(animals)
+    valid_animal
   end
 
   def self.fetch_photo_data(animal_name)
