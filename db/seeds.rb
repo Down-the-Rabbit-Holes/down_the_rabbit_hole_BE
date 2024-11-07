@@ -76,7 +76,7 @@ Animal.create!(
     life_span: "15 years in captivity, less in the wild",
     weight: "29-90kg (64-198lbs)",
     diet: "Carnivore"
-
+)
     User.create!(
         name: "Jim"
     )

@@ -24,14 +24,15 @@ class Animal < ApplicationRecord
   end
 
   def self.find_animal(params)
-    animal = Animal.where("name ILIKE ?", "%#{params[:name]}%")
+    animal = where("name ILIKE ?", "%#{params[:name]}%")
   end
 
   def self.handle_predator_creation(animal)
-    predators = Animal.format_predators(animal)
+    # require 'pry'; binding.pry
+    predators = format_predators(animal)
     predators_data = predators.map do |predator_name|
       # if (!animal_exists(predator_name))
-      unless Animal.where("name ILIKE ?", predator_name).exists?
+      unless where("name ILIKE ?", predator_name).exists?
         animal_response = AnimalGateway.fetch_animal_data(predator_name)
         photo_response = AnimalGateway.fetch_photo_data(predator_name)
         new_animal = AnimalDetail.new(animal_response, photo_response).as_json if animal_response
