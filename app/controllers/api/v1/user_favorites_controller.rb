@@ -27,7 +27,7 @@ class Api::V1::UserFavoritesController < ApplicationController
     user_favorite = UserFavorite.find_by(user_id: @user.id, animal_id: @animal.id)
 
     if user_favorite
-      user_favorite.destroy
+      user_favorite.destroy!
       render json: { message: "Favorite removed" }, status: :ok
     else
       render json: { error: "Favorite not found" }, status: :not_found

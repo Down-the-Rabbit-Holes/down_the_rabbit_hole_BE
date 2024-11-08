@@ -127,14 +127,15 @@ RSpec.describe "UserFavorites", type: :request do
         scientific_name: "Canis latrans"
         )
 
-        @user_favorite = UserFavorite.create!(user_id: @user.id, animal_id: @animal.id)
+      @user_favorite = UserFavorite.create!(user_id: @user.id, animal_id: @animal.id)
+
     end
 
     it 'deletes a favorite' do
       expect(UserFavorite.count).to eq(1)
-
       delete "/api/v1/users/#{@user.id}/user_favorites/#{@animal.id}"
-
+    
+      
       expect(UserFavorite.count).to eq(0)
       expect(response).to have_http_status(:ok)
 
