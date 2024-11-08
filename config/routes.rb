@@ -8,16 +8,17 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
   namespace :api do
     namespace :v1 do
       resources :animals, only: [:index]
       resources :users, only: [:index] do
-        resources :user_favorites, only: [:index, :create, :destroy]
+        resources :user_favorites, only: [:index, :create]
       end
     end
   end
    
   # get "/api/v1/users/:user_id/user_favorites", to: "api/v1/user_favorites#index"
   # post "/api/v1/users/:user_id/user_favorites",  to: "api/v1/user_favorites#create"
-  # delete "/api/v1/users/:user_id/user_favorites/:animal_id", to: "api/v1/user_favorites#destroy"
+  delete "/api/v1/users/:user_id/user_favorites/:animal_id", to: "api/v1/user_favorites#destroy"
 end
