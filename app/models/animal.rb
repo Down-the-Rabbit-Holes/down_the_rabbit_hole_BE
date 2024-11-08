@@ -18,7 +18,7 @@ class Animal < ApplicationRecord
 
   def predators_with_data
     predator_names = self.predators.gsub(/\band\b/, '').split(',').map(&:strip).map(&:singularize)
-    Animal.where('name ILIKE ANY (ARRAY[?])', predator_names.map { |name| "%#{name}%" })
+    Animal.where('name ILIKE ANY (ARRAY[?])', predator_names.map { |name| "%#{name}%" }).to_a
   end
 
   def self.find_animal(params)

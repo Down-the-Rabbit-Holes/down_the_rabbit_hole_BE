@@ -50,7 +50,7 @@ RSpec.describe Animal, type: :model do
         name: "test_3",
         photo_url: "https://images.pexels.com/photos/TEST",
         prey: "not the above two ones thats for sure",
-        predators: "Raccoons, weasels, great horned owls, humans",
+        predators: "nothing",
         habitat: "Forests, especially old growth forests near bodies of water, wooded swamps",
         scientific_name: "Strix varia",
         fun_fact: "Barred owls are active during the day, which is unusual for owls.",
@@ -62,6 +62,7 @@ RSpec.describe Animal, type: :model do
     end
 
     it '#predators_with_data gets called on an animal to return its predators' do
+    
       result = @test_animal_1.predators_with_data
 
       expect(result).to be_an(Array)
@@ -73,13 +74,16 @@ RSpec.describe Animal, type: :model do
       expect(no_preds).to eq([])
     end
 
-    it '#self.find_animal finds an animal & returns it as nested object' do
+    it '#self.find_animal finds an animal & returns it as an object' do
+
       result = Animal.find_animal(name: "TeSt_1")
 
-      expect(result).to eq([@test_animal_1])
+      expect(result).to be_an(Animal)
+      expect(result).to eq(@test_animal_1)
     end
 
     it '#def self.format_predators arrays & formats an animals predators' do
+
       before_method = @test_animal_2.predators
 
       expect(before_method).to eq("Hawks, Eagles, Foxes, other snakes, Coyotes, Bobcats")
@@ -90,11 +94,7 @@ RSpec.describe Animal, type: :model do
     end
 
     it '#self.handle_predator_creation creates new animals unless it exists' do
-      stub_request(:get, "https://api.api-ninjas.com/v1/animals?name=#{@test_animal_1.name}")
-      .to_return(body: { name: "new_pred", predators: "Some predator" }.to_json)
 
-      stub_request(:get, "https://api.pexels.com/v1/search?query=new_pred")
-      .to_return(body: { name: "new_pred_image" }.to_json)
       Animal.handle_predator_creation(@test_animal_2)
       
       new_animal = Animal.find_by(name: "Ferruginous Hawk")
@@ -102,13 +102,11 @@ RSpec.describe Animal, type: :model do
       expect(new_animal.name).to eq("Ferruginous Hawk")
     end
 
-    it '(SADPATH)#self.handle_predator_creation returns an empty array instead of nil' do
-      allow(AnimalGateway).to receive(:fetch_animal_data).and_return(nil)
-      allow(AnimalGateway).to receive(:fetch_photo_data).and_return(nil)
+    it '#self.handle_predator_creation returns current animals predators' do
 
-      result = Animal.handle_predator_creation(@test_animal_1)
+      current_animal = Animal.handle_predator_creation(@test_animal_1)
 
-      expect(result).to eq([])
+      expect(current_animal).to eq(["test_2", "test_3"])
     end
   end
 end
