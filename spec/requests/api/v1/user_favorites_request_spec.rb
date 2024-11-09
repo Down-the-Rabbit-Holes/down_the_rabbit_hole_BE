@@ -28,29 +28,29 @@ RSpec.describe "UserFavorites", type: :request do
     end
     
     it 'returns a list of favorited animals' do
-        UserFavorite.create!(user_id: @user.id, animal_id: @animal.id)
+      UserFavorite.create!(user_id: @user.id, animal_id: @animal.id)
 
-        get "/api/v1/users/#{@user.id}/user_favorites"
+      get "/api/v1/users/#{@user.id}/user_favorites"
 
-        expect(response).to be_successful
-        expect(response.status).to eq(200)
+      expect(response).to be_successful
+      expect(response.status).to eq(200)
 
-        parsed_body = JSON.parse(response.body)
+      parsed_body = JSON.parse(response.body)
 
-        expect(parsed_body).to be_an(Array)
-        expect(parsed_body.first["name"]).to eq("test")
-        expect(parsed_body.first["photo_url"]).to eq("www.pexels.com/photo/two-playful-coyotes-27067820/")
-        expect(parsed_body.first["prey"]).to eq("Rabbit, Mice, Deer")
-        expect(parsed_body.first["predators"]).to eq("Human, Bears, Wolves, Great horned owls, Bald Eagles")
-        expect(parsed_body.first["habitat"]).to eq("Forests, plains and deserts")
-        expect(parsed_body.first["fun_fact"]).to eq("Also known as the Prairie Wolf!")
-        expect(parsed_body.first["top_speed"]).to eq("40 miles per hour")
-        expect(parsed_body.first["life_span"]).to eq("10 - 15 years")
-        expect(parsed_body.first["weight"]).to eq("7kg - 21kg (15lbs - 46lbs)")
-        expect(parsed_body.first["diet"]).to eq("Carnivore")
-        expect(parsed_body.first["scientific_name"]).to eq("Canis latrans")
-        expect(parsed_body.first["id"]).to eq(@animal.id)
-    end
+      expect(parsed_body).to be_an(Array)
+      expect(parsed_body.first["name"]).to eq("test")
+      expect(parsed_body.first["photo_url"]).to eq("www.pexels.com/photo/two-playful-coyotes-27067820/")
+      expect(parsed_body.first["prey"]).to eq("Rabbit, Mice, Deer")
+      expect(parsed_body.first["predators"]).to eq("Human, Bears, Wolves, Great horned owls, Bald Eagles")
+      expect(parsed_body.first["habitat"]).to eq("Forests, plains and deserts")
+      expect(parsed_body.first["fun_fact"]).to eq("Also known as the Prairie Wolf!")
+      expect(parsed_body.first["top_speed"]).to eq("40 miles per hour")
+      expect(parsed_body.first["life_span"]).to eq("10 - 15 years")
+      expect(parsed_body.first["weight"]).to eq("7kg - 21kg (15lbs - 46lbs)")
+      expect(parsed_body.first["diet"]).to eq("Carnivore")
+      expect(parsed_body.first["scientific_name"]).to eq("Canis latrans")
+      expect(parsed_body.first["id"]).to eq(@animal.id)
+  end
   end
 
   describe "POST /create" do
@@ -92,6 +92,7 @@ RSpec.describe "UserFavorites", type: :request do
       expect(parsed_body["id"]).to eq(@animal.id)
 
       user_favorite = UserFavorite.find_by(user_id: @user.id, animal_id: @animal.id)
+      
       expect(user_favorite).to be_a(UserFavorite)
       expect(user_favorite.user_id).to eq(@user.id)
       expect(user_favorite.animal_id).to eq(@animal.id)
@@ -128,14 +129,12 @@ RSpec.describe "UserFavorites", type: :request do
         )
 
       @user_favorite = UserFavorite.create!(user_id: @user.id, animal_id: @animal.id)
-
     end
 
     it 'deletes a favorite' do
       expect(UserFavorite.count).to eq(1)
       delete "/api/v1/users/#{@user.id}/user_favorites/#{@animal.id}"
     
-      
       expect(UserFavorite.count).to eq(0)
       expect(response).to have_http_status(:ok)
 
