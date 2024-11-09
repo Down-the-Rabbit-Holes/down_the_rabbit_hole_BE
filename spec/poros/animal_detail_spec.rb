@@ -6,7 +6,6 @@ RSpec.describe AnimalDetail do
     let(:photo_data) { JSON.parse(File.read('spec/fixtures/animal_fixtures/rabbit_photo_data.json'), symbolize_names: true) }
     let(:animal) { AnimalDetail.new(animal_data, photo_data) }
 
-    # binding.pry
     it 'initializes with name' do
       expect(animal.name).to eq("Rabbit")
 
@@ -43,6 +42,16 @@ RSpec.describe AnimalDetail do
       expect(animal.weight).to eq("Ask your parents!")
       expect(animal.diet).to eq("Ask your parents!")
       expect(animal.scientific_name).to eq("Ask your parents!")
+    end
+  end
+
+  describe '#default_message' do
+    it 'returns a default message' do
+      animal_data = JSON.parse(File.read('spec/fixtures/animal_fixtures/null_animal_data.json'), symbolize_names: true)
+      photo_data = JSON.parse(File.read('spec/fixtures/animal_fixtures/null_photo_data.json'), symbolize_names: true)
+      animal = AnimalDetail.new(animal_data, photo_data)
+
+      expect(animal.send(:default_message)).to eq("Ask your parents!")
     end
   end
 end

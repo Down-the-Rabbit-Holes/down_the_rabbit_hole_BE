@@ -18,7 +18,7 @@ class Animal < ApplicationRecord
 
   def predators_with_data
     predator_names = self.predators.gsub(/\band\b/, '').split(',').map(&:strip).map(&:singularize)
-    Animal.where('name ILIKE ANY (ARRAY[?])', predator_names.map { |name| "%#{name}%" })
+    Animal.where('name ILIKE ANY (ARRAY[?])', predator_names.map { |name| "%#{name}%" }).to_a
   end
 
   def self.find_animal(params)
@@ -29,7 +29,7 @@ class Animal < ApplicationRecord
     predators = format_predators(animal)
     predators.each do |predator_name|
       next if Animal.where("name ILIKE ?", "%#{predator_name}%").exists?
-  
+
       animal_response = AnimalGateway.fetch_animal_data(predator_name)
       photo_response = AnimalGateway.fetch_photo_data(predator_name)
       if animal_response && photo_response
@@ -39,7 +39,6 @@ class Animal < ApplicationRecord
     end
   end
 
-  # private
   def self.format_predators(animal)
     animal.predators.gsub(/\band\b/, '').split(',').map(&:strip).map(&:singularize)
   end
