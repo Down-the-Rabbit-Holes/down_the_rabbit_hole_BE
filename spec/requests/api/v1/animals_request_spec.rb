@@ -20,12 +20,11 @@ RSpec.describe "Animals", type: :request do
       selected_params = { action_type: "selected_animal", name: "rabbit" }
 
       get "/api/v1/animals", params: selected_params
-      # binding.pry
 
       expect(response).to be_successful
 
       selected_animal = JSON.parse(response.body, symbolize_names: true)[:data]
-      # binding.pry
+      
       expect(selected_animal[:attributes][:name]).to eq("rabbit")
     end
   end
