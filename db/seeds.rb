@@ -9,85 +9,99 @@
 #   end
 
 Animal.create!(
-    name: "rabbit", 
-    photo_url: "https://images.pexels.com/photos/326012/pexels-photo-326012.jpeg", 
-    prey: "Clover, Grass, Crunchy vegetables",
-    predators: "Fox, wolf, owl, bobcat, weasel, stoat, hawk, raccoon, mink,", 
-    habitat: "forest thickets, meadows and woodland",
-    fun_fact: "There are more than 50 different species!",
-    top_speed: "18 miles per hour",
-    life_span: "4-9 years",
-    weight: "0.5-3kg (1.1-6.6lbs)",
-    diet: "Herbivore",
-    scientific_name: "oryctolagus cuniculus"
+  name: "rabbit", 
+  photo_url: "https://images.pexels.com/photos/326012/pexels-photo-326012.jpeg", 
+  prey: "Clover, Grass, Crunchy vegetables",
+  predators: "Fox, wolf, owl, bobcat, weasel, stoat, hawk, raccoon, mink,", 
+  habitat: "forest thickets, meadows and woodland",
+  fun_fact: "There are more than 50 different species!",
+  top_speed: "18 miles per hour",
+  life_span: "4-9 years",
+  weight: "0.5-3kg (1.1-6.6lbs)",
+  diet: "Herbivore",
+  scientific_name: "oryctolagus cuniculus"
+)
+
+Animal.create!(
+  name: "Coyote", 
+  photo_url: "https://images.pexels.com/photos/23511068/pexels-photo-23511068/free-photo-of-close-up-of-a-coyote-standing-on-a-field.jpeg?auto=compress&cs=tinysrgb&w=600", 
+  prey: "Rabbit, Mice, Deer",
+  predators: "Human, Bears, Wolves, Great horned owls, Bald Eagles", 
+  habitat: "Forests, plains and deserts",
+  fun_fact: "Also known as the Prairie Wolf!",
+  top_speed: "40 miles per hour",
+  life_span: "10 - 15 years",
+  weight: "7kg - 21kg (15lbs - 46lbs)",
+  diet: "Carnivore",
+  scientific_name: "Canis latrans"
+)
+
+Animal.create!(
+  name: "Barred Owl",
+  photo_url: "https://images.pexels.com/photos/12755682/pexels-photo-12755682.jpeg?auto=compress&cs=tinysrgb&w=600",
+  prey: "Mammals, including house mice and rabbits, other birds, amphibians, reptiles, insects and other invertebrates and even fish.",
+  predators: "Raccoons, weasels, great horned owls, humans",
+  habitat: "Forests, especially old growth forests near bodies of water, wooded swamps",
+  scientific_name: "Strix varia",
+  fun_fact: "Barred owls are active during the day, which is unusual for owls.",
+  top_speed: "30 mph",
+  life_span: "18 years",
+  weight: "Males weigh 1 to 1.8 pounds, females weigh about 1.8 to 2 pounds",
+  diet: "Carnivore"
+)
+
+Animal.create!(
+  name: "Mountain Lion",
+  photo_url: "https://images.pexels.com/photos/53001/cougar-mountain-lion-puma-concolor-big-cat-53001.jpeg?auto=compress&cs=tinysrgb&w=600",
+  prey: "Deer, Elk, Beavers",
+  predators: "Human, Grizzly Bear, Wolves, Jaguars",
+  habitat: "Forest and mountainous regions",
+  scientific_name: "Felis Concolor",
+  fun_fact: "Has no real natural predators!",
+  top_speed: "30 mph",
+  life_span: "10-20 years",
+  weight: "29-90kg (64-198lbs)",
+  diet: "Carnivore"
     )
 
 Animal.create!(
-    name: "Coyote", 
-    photo_url: "https://images.pexels.com/photos/23511068/pexels-photo-23511068/free-photo-of-close-up-of-a-coyote-standing-on-a-field.jpeg?auto=compress&cs=tinysrgb&w=600", 
-    prey: "Rabbit, Mice, Deer",
-    predators: "Human, Bears, Wolves, Great horned owls, Bald Eagles", 
-    habitat: "Forests, plains and deserts",
-    fun_fact: "Also known as the Prairie Wolf!",
-    top_speed: "40 miles per hour",
-    life_span: "10 - 15 years",
-    weight: "7kg - 21kg (15lbs - 46lbs)",
-    diet: "Carnivore",
-    scientific_name: "Canis latrans"
+  name: "Corn Snake",
+  photo_url: "https://images.pexels.com/photos/15799789/pexels-photo-15799789.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  prey: "Rats, Mice, Baby birds, Eggs",
+  predators: "Hawks, Eagles, Foxes, other snakes, Coyotes, Bobcats",
+  habitat: "Forested areas, fields, swamps, hardwood hammocks, neighborhoods bordering habitat",
+  scientific_name: "P. guttatus",
+  fun_fact: "Corn snakes have scales on their backs that help them camouflage in leaf litter.",
+  top_speed: "18 mph",
+  life_span: "15 years in captivity, less in the wild",
+  weight: "29-90kg (64-198lbs)",
+  diet: "Carnivore"
     )
 
 Animal.create!(
-    name: "Barred Owl",
-    photo_url: "https://images.pexels.com/photos/12755682/pexels-photo-12755682.jpeg?auto=compress&cs=tinysrgb&w=600",
-    prey: "Mammals, including house mice and rabbits, other birds, amphibians, reptiles, insects and other invertebrates and even fish.",
-    predators: "Raccoons, weasels, great horned owls, humans",
-    habitat: "Forests, especially old growth forests near bodies of water, wooded swamps",
-    scientific_name: "Strix varia",
-    fun_fact: "Barred owls are active during the day, which is unusual for owls.",
-    top_speed: "30 mph",
-    life_span: "18 years",
-    weight: "Males weigh 1 to 1.8 pounds, females weigh about 1.8 to 2 pounds",
-    diet: "Carnivore"
-    )
+  name: "Bobcat",
+  photo_url: "https://images.pexels.com/photos/11533125/pexels-photo-11533125.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  prey: "Rabbits, Deer, Birds, Mice",
+  predators: "Coyotes, Wolves, Mountain Lions, Alligators, Humans",
+  habitat: "Forests, swamps, deserts, and even urban areas",
+  scientific_name: "Lynx rufus",
+  fun_fact: "Bobcats are excellent climbers, can swim when they need to, and are about double the size of a domestica cat.",
+  top_speed: "34 mph",
+  life_span: "12-15 years",
+  weight: "4.1kg - 15.3g (9lbs - 33lbs)",
+  diet: "Carnivore"
+)
 
-Animal.create!(
-    name: "Mountain Lion",
-    photo_url: "https://images.pexels.com/photos/53001/cougar-mountain-lion-puma-concolor-big-cat-53001.jpeg?auto=compress&cs=tinysrgb&w=600",
-    prey: "Deer, Elk, Beavers",
-    predators: "Human, Grizzly Bear, Wolves, Jaguars",
-    habitat: "Forest and mountainous regions",
-    scientific_name: "Felis Concolor",
-    fun_fact: "Has no real natural predators!",
-    top_speed: "30 mph",
-    life_span: "10-20 years",
-    weight: "29-90kg (64-198lbs)",
-    diet: "Carnivore"
-    )
 
-    Animal.create!(
-    name: "Corn Snake",
-    photo_url: "https://images.pexels.com/photos/15799789/pexels-photo-15799789.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-    prey: "Rats, Mice, Baby birds, Eggs",
-    predators: "Hawks, Eagles, Foxes, other snakes, Coyotes, Bobcats",
-    habitat: "Forested areas, fields, swamps, hardwood hammocks, neighborhoods bordering habitat",
-    scientific_name: "P. guttatus",
-    fun_fact: "Corn snakes have scales on their backs that help them camouflage in leaf litter.",
-    top_speed: "18 mph",
-    life_span: "15 years in captivity, less in the wild",
-    weight: "29-90kg (64-198lbs)",
-    diet: "Carnivore"
-    )
-    
+User.create!(
+    name: "Jim"
+)
 
-    User.create!(
-        name: "Jim"
-    )
+User.create!(
+    name: "Candice"
+)
 
-    User.create!(
-        name: "Candice"
-    )
-
-    UserFavorite.create!(
-        animal_id: 1,
-        user_id: 1
-    )
+UserFavorite.create!(
+    animal_id: 1,
+    user_id: 1
+)
