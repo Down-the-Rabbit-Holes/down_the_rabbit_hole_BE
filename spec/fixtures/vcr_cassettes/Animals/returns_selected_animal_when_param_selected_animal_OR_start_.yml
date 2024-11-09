@@ -1,0 +1,645 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.api-ninjas.com/v1/animals?name=fox
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<ANIMAL_API_KEY>"
+      User-Agent:
+      - Faraday v2.12.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '16531'
+      Connection:
+      - keep-alive
+      Date:
+      - Sat, 09 Nov 2024 17:35:56 GMT
+      X-Amzn-Trace-Id:
+      - Root=1-672f9d7c-30f0ef4e5f0e4ec16ae20ce4;Parent=6aca961d5165c09a;Sampled=0;Lineage=1:09d9c399:0
+      X-Amzn-Requestid:
+      - fa31ca5a-47bb-4c42-bde5-098842a62bac
+      Access-Control-Allow-Origin:
+      - "*"
+      Allow:
+      - GET, OPTIONS, POST
+      Access-Control-Allow-Headers:
+      - "*"
+      X-Amz-Apigw-Id:
+      - A_WLkGA8vHcEkvg=
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS, POST
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 96b078df4a5d96ad3cc52cfe9d984774.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-P1
+      X-Amz-Cf-Id:
+      - BpUUhJqE5AHP8U4j5yvrtMtv0mCgmdHuOrvonZNaQguqXj9pm-MJJw==
+    body:
+      encoding: UTF-8
+      string: '[{"name": "American Foxhound", "taxonomy": {"kingdom": "Animalia",
+        "phylum": "Chordata", "class": "Mammalia", "order": "Carnivora", "family":
+        "Canidae", "genus": "Canis", "scientific_name": "Canis lupus"}, "locations":
+        ["North-America"], "characteristics": {"distinctive_feature": "Long legs and
+        wide, flat ears", "temperament": "Mix of affectionate, loving, and stubborn",
+        "training": "Medium", "diet": "Omnivore", "average_litter_size": "7", "type":
+        "Hound", "common_name": "American Foxhound", "slogan": "Sweet, kind, loyal,
+        and very loving!", "group": "Dog", "color": "BlackWhiteTan", "skin_type":
+        "Hair", "lifespan": "10 to 12 years"}}, {"name": "Arctic Fox", "taxonomy":
+        {"kingdom": "Animalia", "phylum": "Chordata", "class": "Mammalia", "order":
+        "Carnivora", "family": "Canidae", "genus": "Vulpes", "scientific_name": "Vulpes
+        lagopus"}, "locations": ["Eurasia", "Europe", "North-America"], "characteristics":
+        {"main_prey": "Lemmings, voles, hares, other small rodents, berries, insects",
+        "name_of_young": "kit", "distinctive_feature": "Thick fur that changes colour
+        with season", "habitat": "Polar forest regions", "predators": "Snowy Owl,
+        Wolf, Polar Bear", "diet": "Carnivore", "average_litter_size": "5", "lifestyle":
+        "Solitary", "favorite_food": "Lemmings", "type": "Mammal", "slogan": "Extremely
+        thick winter fur!", "color": "GreyBlackWhite", "skin_type": "Fur", "top_speed":
+        "30 mph", "lifespan": "7 - 10 years", "weight": "1.4kg - 9.4kg (3lbs - 21lbs)",
+        "length": "70cm - 110cm (28in - 43in)"}}, {"name": "Cross Fox", "taxonomy":
+        {"kingdom": "Animalia", "phylum": "Chordata", "class": "Mammalia", "order":
+        "Carnivora", "family": "Canidae", "genus": "Vulpes", "scientific_name": "Vulpes
+        vulpes"}, "locations": ["North-America"], "characteristics": {"prey": "Birds,
+        small mammals, insects, spiders, worms, reptiles", "name_of_young": "Cub,
+        pup, kit", "group_behavior": "Solitary", "estimated_population_size": "Tens
+        of thousands", "biggest_threat": "Humans, wolves, coyotes, mountain lions,
+        eagles, bears", "most_distinctive_feature": "The cross on its back.", "gestation_period":
+        "49 to 55 days", "litter_size": "5-13 cubs", "habitat": "Forests, prairies,
+        deserts, mountains, cities, suburbs, tundra, scrub, near rivers, farms", "predators":
+        "Gray wolves, coyotes, eagles, bears, humans and cougars", "diet": "Carnivore",
+        "type": "mammal", "common_name": "cross fox", "location": "North America and
+        Canada", "color": "RedBlackSilver", "skin_type": "Fur", "top_speed": "31 mph",
+        "lifespan": "10 to 15 years in captivity, seven years in the wild", "height":
+        "14 to 20 inches", "length": "18 to 35 inches with 12 to 22 inch long tails,
+        males a bit larger", "age_of_sexual_maturity": "10 months", "age_of_weaning":
+        "56 to 70 days"}}, {"name": "Darwin\u2019s fox", "taxonomy": {"kingdom": "Animalia",
+        "phylum": "Chordata", "class": "Mammalia", "order": "Carnivora", "family":
+        "Canidae", "genus": "Lycalopex", "scientific_name": "Lycalopex fulvipes"},
+        "locations": ["South-America"], "characteristics": {"prey": "Small mammals,
+        reptiles, insects and other invertebrates", "name_of_young": "Pup, cub, kit",
+        "group_behavior": "Solitary", "estimated_population_size": "639 adults, conservation
+        status endangered", "biggest_threat": "Habitat fragmentation, feral and domesticated
+        dogs", "most_distinctive_feature": "Its small size", "other_name(s)": "Darwin''s
+        zorro, zorro chilote, zorro de Darwin", "gestation_period": "Perhaps two months",
+        "litter_size": "Two to three", "habitat": "Temperate rainforests, shrubland",
+        "diet": "Omnivore", "type": "Mammal", "number_of_species": "1", "location":
+        "Chile", "color": "GreyRedBlack", "skin_type": "Fur", "top_speed": "45 mph",
+        "lifespan": "Seven years", "weight": "4 to 8.7 pounds", "length": "20.79 inches",
+        "age_of_sexual_maturity": "About one year", "age_of_weaning": "About two months"}},
+        {"name": "English Foxhound", "taxonomy": {"kingdom": "Animalia", "phylum":
+        "Chordata", "class": "Mammalia", "order": "Carnivora", "family": "Canidae",
+        "genus": "Canis", "scientific_name": "Canis lupus"}, "locations": ["Europe"],
+        "characteristics": {"temperament": "Friendly, independent, affectionate",
+        "diet": "Omnivore", "color": "BlackWhiteTanMulti-colored", "skin_type": "Hair",
+        "lifespan": "10 to 13 years", "weight": "75 pounds"}}, {"name": "Fennec Fox",
+        "taxonomy": {"kingdom": "Animalia", "phylum": "Chordata", "class": "Mammalia",
+        "order": "Carnivora", "family": "Canidae", "genus": "Vulpes", "scientific_name":
+        "Vulpes zerda"}, "locations": ["Africa", "Asia"], "characteristics": {"prey":
+        "Berries, Fruit, Rodents, Reptiles", "name_of_young": "Kit", "group_behavior":
+        "Sociable", "estimated_population_size": "Unknown", "biggest_threat": "Habitat
+        loss and hunting", "most_distinctive_feature": "Large, over-sized ears", "gestation_period":
+        "52 days", "habitat": "Sandy and semi-arid desert", "diet": "Omnivore", "average_litter_size":
+        "3", "lifestyle": "Nocturnal", "common_name": "Fennec Fox", "number_of_species":
+        "1", "location": "North Africa", "slogan": "Found in the African Sahara Desert!",
+        "group": "Mammal", "color": "WhiteCreamSandy", "skin_type": "Fur", "top_speed":
+        "25 mph", "lifespan": "10 - 14 years", "weight": "1kg - 1.5kg (2.2lbs - 3.3lbs)",
+        "length": "24cm -41cm (9in - 16in)", "age_of_sexual_maturity": "9 months",
+        "age_of_weaning": "5 weeks"}}, {"name": "Fox", "taxonomy": {"kingdom": "Animalia",
+        "phylum": "Chordata", "class": "Mammalia", "order": "Carnivora", "family":
+        "Canidae", "genus": "Vulpes", "scientific_name": "Vulpes vulpes"}, "locations":
+        ["Africa", "Asia", "Eurasia", "Europe", "North-America"], "characteristics":
+        {"main_prey": "Rabbits, Birds, Lizards", "distinctive_feature": "Pointed ears
+        and long bushy tail", "habitat": "Woodland areas and urban parks", "predators":
+        "Human, Bears, Eagles", "diet": "Carnivore", "average_litter_size": "5", "lifestyle":
+        "Solitary", "favorite_food": "Rabbit", "type": "Mammal", "slogan": "There
+        are 12 different species in the world!", "color": "BrownRedBlackTan", "skin_type":
+        "Fur", "top_speed": "29 mph", "lifespan": "3 - 11 years", "weight": "5kg -
+        11kg (11lbs - 24lbs)", "length": "40cm - 83cm (16in - 33in)"}}, {"name": "Fox
+        Snakes", "taxonomy": {"kingdom": "Animalia", "phylum": "Chordata", "class":
+        "Reptilia", "order": "Squamata", "family": "Colubridae", "genus": "Pantherophis",
+        "scientific_name": "P. vulpinus and P. ramspotti"}, "locations": ["North-America"],
+        "characteristics": {"prey": "Mice, rats, young rabbits, ground-nesting birds
+        and sometimes their eggs, frogs, lizards", "main_prey": "Mice and birds",
+        "name_of_young": "Hatchling", "group_behavior": "Solitary", "biggest_threat":
+        "Mistaken identity, roads", "most_distinctive_feature": "Copper or bronze-colored
+        head", "distinctive_feature": "Strongly patterned alternating blotches down
+        the length of their spine.", "temperament": "Shy, but generally docile.",
+        "litter_size": "6-30", "predators": "Foxes, coyotes, hawks.", "diet": "Carnivore",
+        "lifestyle": "Diurnalor Nocturnal Depending on Region and Season", "favorite_food":
+        "Mice", "common_name": "Fox snake", "number_of_species": "-1", "color": "BrownGreyBeigeChestnut",
+        "skin_type": "Scales", "lifespan": "approximately 20 years"}}, {"name": "Fox
+        Squirrel", "taxonomy": {"kingdom": "Animalia", "phylum": "Chordata", "class":
+        "Mammalia", "order": "Rodentia", "family": "Sciuridae", "genus": "Sciurus",
+        "scientific_name": "Sciurus niger"}, "locations": ["Central-America", "North-America"],
+        "characteristics": {"prey": "Insects, bird eggs", "name_of_young": "Juveniles",
+        "group_behavior": "Social", "biggest_threat": "Overhunting, forest destruction",
+        "most_distinctive_feature": "Large size and large, bushy tail", "other_name(s)":
+        "Bryant''s fox, eastern fox, stump-eared, racoon, and monkey-faced squirrel",
+        "gestation_period": "44-45 days", "litter_size": "2-4", "habitat": "Leaf nests
+        and tree dens", "predators": "Birds of prey, carnivorous mammals", "diet":
+        "Omnivore", "type": "rodent", "common_name": "fox squirrel", "number_of_species":
+        "10", "location": "Eastern and central United States", "group": "social",
+        "color": "BrownGrey-Brown", "skin_type": "Fur", "top_speed": "17 mph", "lifespan":
+        "6-12.6 years", "length": "21 inches", "age_of_sexual_maturity": "10-11 months",
+        "age_of_weaning": "2 months"}}, {"name": "Fox Terrier", "taxonomy": {"kingdom":
+        "Animalia", "phylum": "Chordata", "class": "Mammalia", "order": "Carnivora",
+        "family": "Canidae", "genus": "Canis", "scientific_name": "Canis Lupus"},
+        "locations": ["Europe"], "characteristics": {"diet": "Omnivore", "common_name":
+        "Fox Terrier", "slogan": "First bred in the mid-19th century!", "group": "Terrier",
+        "skin_type": "Hair", "lifespan": "14 years", "weight": "8kg (18lbs)"}}, {"name":
+        "Golden-Crowned Flying Fox", "taxonomy": {"kingdom": "Animalia", "phylum":
+        "Chordata", "class": "Mammalia", "order": "Chiroptera", "family": "Pteropodidae",
+        "genus": "Acerodon", "scientific_name": "Acerodon jubatus"}, "locations":
+        ["Asia"], "characteristics": {"name_of_young": "Pup", "group_behavior": "Group",
+        "estimated_population_size": "10,000 \u2013 20,000", "biggest_threat": "Human
+        hunters", "most_distinctive_feature": "Soft golden cap", "litter_size": "One",
+        "habitat": "Caves and forests", "predators": "Reticulated pythons, eagles,
+        humans", "diet": "Herbivore", "favorite_food": "Figs, leaves, some other fruits",
+        "common_name": "Golden crowned flying fox", "group": "They live in large gatherings
+        in the woods", "color": "BlackGold", "skin_type": "Hair", "lifespan": "unknown",
+        "weight": "3.1 pounds", "height": "7 and 11.4 inches", "age_of_sexual_maturity":
+        "2 years for females"}}, {"name": "Gray Fox", "taxonomy": {"kingdom": "Animalia",
+        "phylum": "Chordata", "class": "Mammalia", "order": "Carnivora", "family":
+        "Canidae", "genus": "Urocyon", "scientific_name": "Urocyon cinereoargenteus"},
+        "locations": ["Central-America", "North-America", "South-America"], "characteristics":
+        {"prey": "Rodents, birds, insects, and fruit", "name_of_young": "Pups or kits",
+        "group_behavior": "SolitaryFamily units", "estimated_population_size": "Unknown",
+        "biggest_threat": "Hunting and habitat loss", "most_distinctive_feature":
+        "The silver gray coat of fur", "other_name(s)": "Tree fox or cat fox", "gestation_period":
+        "53-63 days", "litter_size": "1-7 kits", "habitat": "Forests and plains",
+        "diet": "Omnivore", "type": "Mammal", "common_name": "Gray Fox", "number_of_species":
+        "1", "location": "North America and northern part of South America", "color":
+        "GreyRedBlackWhite", "skin_type": "Fur", "top_speed": "28 mph", "lifespan":
+        "6-12 years", "weight": "3.2-6.4kg (7-14lbs)", "height": "30-40cm (12-16in)",
+        "length": "89-105cm (35-41in)", "age_of_sexual_maturity": "10 months", "age_of_weaning":
+        "2-6 weeks"}}, {"name": "Kit Fox", "taxonomy": {"kingdom": "Animalia", "phylum":
+        "Chordata", "class": "Mammalia", "order": "Carnivora", "family": "Canidae",
+        "genus": "Vulpes", "scientific_name": "Vulpes macrotis merriam"}, "locations":
+        ["Central-America", "North-America"], "characteristics": {"prey": "kangaroo
+        rat, cottontail, jackrabbit, reptiles, insects, birds", "name_of_young": "pup",
+        "group_behavior": "Solitary", "biggest_threat": "habitat destruction, competition
+        from coyotes", "most_distinctive_feature": "tiny bodies and enormous ears",
+        "gestation_period": "49 - 55 days", "litter_size": "one to seven pups", "habitat":
+        "desert, grasslands", "predators": "coyotes, bobcats, red foxes, birds of
+        prey", "diet": "Omnivore", "type": "mammal", "common_name": "kit fox", "number_of_species":
+        "1", "location": "Southwest United States, North and Central Mexico", "group":
+        "solitary", "color": "GreyYellowBlackWhite", "skin_type": "Fur", "top_speed":
+        "25 mph", "lifespan": "seven years in the wild. 12 years in captivity", "weight":
+        "4.5 to five pounds", "height": "nine to 12 inches", "length": "20 inches
+        (body), 12 inches (tail)", "age_of_sexual_maturity": "10 months", "age_of_weaning":
+        "eight weeks"}}, {"name": "Marble Fox", "taxonomy": {"kingdom": "Animalia",
+        "phylum": "Chordata", "class": "Mammalia", "order": "Carnivora", "family":
+        "Canidae", "genus": "Vulpes", "scientific_name": "Vulpes vulpes"}, "locations":
+        ["North-America"], "characteristics": {"prey": "Rodents, birds, reptiles,
+        insects, and more", "name_of_young": "Kits", "group_behavior": "Solitary",
+        "estimated_population_size": "Unknown", "biggest_threat": "Fur industry",
+        "most_distinctive_feature": "The marble-colored coat", "other_name(s)": "Canadian
+        marble fox or Arctic marble fox", "gestation_period": "Up to 2 months", "litter_size":
+        "1-13 kits", "habitat": "Human captivity", "predators": "None in captivity",
+        "diet": "Omnivore", "type": "Mammal", "common_name": "Marble fox", "number_of_species":
+        "1", "location": "Worldwide", "color": "BrownBlackWhite", "skin_type": "Fur",
+        "top_speed": "30 mph", "lifespan": "Up to 15 years", "weight": "1-10kg (3-21lbs)",
+        "height": "Up to 69cm (27in)", "length": "Up to 63cm (25in) in body length,
+        not including the tail", "age_of_sexual_maturity": "10 months", "age_of_weaning":
+        "50-70 days"}}, {"name": "Red Fox", "taxonomy": {"kingdom": "Animalia", "phylum":
+        "Chordata", "class": "Mammalia", "order": "Carnivora", "family": "Canidae",
+        "genus": "Vulpes", "scientific_name": "Vulpes vulpes"}, "locations": ["Africa",
+        "Asia", "Europe", "North-America", "Oceania"], "characteristics": {"prey":
+        "Rabbits, mice, voles, birds, frogs, fish, eggs, and fruits and vegetables",
+        "name_of_young": "Kits or pups", "group_behavior": "Family units", "estimated_population_size":
+        "Millions", "biggest_threat": "Hunting", "most_distinctive_feature": "The
+        bushy tail", "other_name(s)": "Silver fox or cross fox", "gestation_period":
+        "49-55 days", "litter_size": "1-13", "habitat": "Forests, grasslands, tundra,
+        prairie, deserts, and mountains", "predators": "Wolves, cougars, lynxes, bobcats,
+        eagles, and owls", "diet": "Omnivore", "average_litter_size": "1-13", "common_name":
+        "Red fox", "number_of_species": "1", "location": "North America, Europe, Asia,
+        North Africa, and Australia", "color": "BrownGreyRedBlackSilver", "skin_type":
+        "Hair", "top_speed": "31 mph", "lifespan": "2-4 years in the wild, 10-12 in
+        captivity", "weight": "6.5-24 lbs", "height": "16 inches", "length": "36-42
+        inches", "age_of_sexual_maturity": "10 months", "age_of_weaning": "56-70 days"}},
+        {"name": "Smooth Fox Terrier", "taxonomy": {"kingdom": "Animalia", "phylum":
+        "Chordata", "class": "Mammalia", "order": "Carnivora", "family": "Canidae",
+        "genus": "Canis", "scientific_name": "Canis lupus"}, "locations": ["Europe"],
+        "characteristics": {"temperament": "Energetic and curious", "diet": "Omnivore",
+        "color": "BrownBlackWhiteTan", "skin_type": "Hair", "lifespan": "12 \u2013
+        15 years", "height": "18 lbs"}}, {"name": "Tibetan Fox", "taxonomy": {"kingdom":
+        "Animalia", "phylum": "Chordata", "class": "Mammalia", "order": "Carnivora",
+        "family": "Canidae", "genus": "Vulpes", "scientific_name": "Vulpes ferrilata"},
+        "locations": ["Asia"], "characteristics": {"main_prey": "pikas, marmots, rodents,
+        lizards, and other small prey", "name_of_young": "Kits", "group_behavior":
+        "Pair", "estimated_population_size": "40,000", "biggest_threat": "Pika population
+        reduction", "most_distinctive_feature": "Square-shaped skull", "other_name(s)":
+        "Tibetan sand fox", "gestation_period": "50-60 days", "litter_size": "2-4",
+        "habitat": "Tibetan Plateau", "predators": "Humans", "diet": "Carnivore",
+        "type": "Mammal", "common_name": "Tibetan fox", "color": "GreyTan", "skin_type":
+        "Fur", "top_speed": "44 mph", "lifespan": "8-10 years", "weight": "8-12 lbs
+        (4-5 kg)", "length": "24-28 in (60-70 cm)", "age_of_sexual_maturity": "1 year",
+        "age_of_weaning": "5-9 weeks"}}, {"name": "Toy Fox Terrier", "taxonomy": {"kingdom":
+        "Animalia", "phylum": "Chordata", "class": "Mammalia", "order": "Carnivora",
+        "family": "Canidae", "genus": "Canis", "scientific_name": "Canis lupus"},
+        "locations": ["North-America"], "characteristics": {"temperament": "Intelligent,
+        friendly, alert, playful, loyal, spirited", "diet": "Omnivore", "color": "BlackWhiteTanChocolate",
+        "skin_type": "Hair", "lifespan": "11-14 years", "weight": "13 pounds"}}, {"name":
+        "Wire Fox Terrier", "taxonomy": {"kingdom": "Animalia", "phylum": "Chordata",
+        "class": "Mammalia", "order": "Carnivora", "family": "Canidae", "genus": "Canis",
+        "scientific_name": "Canis lupus"}, "locations": ["Europe"], "characteristics":
+        {"temperament": "Alert, friendly, and confident", "diet": "Omnivore", "color":
+        "BlackWhiteTan", "skin_type": "Hair", "lifespan": "13 \u2013 14 years", "weight":
+        "19 lbs"}}]'
+  recorded_at: Sat, 09 Nov 2024 17:35:56 GMT
+- request:
+    method: get
+    uri: https://api.pexels.com/v1/search?query=fox
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - "<PEXEL_API_KEY>"
+      User-Agent:
+      - Faraday v2.12.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 09 Nov 2024 17:35:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 8dff8fed9c21e753-DEN
+      Cf-Cache-Status:
+      - HIT
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=86400
+      Etag:
+      - W/"b6789145394d281fc0b9870eef80205e"
+      Expires:
+      - Sun, 10 Nov 2024 17:35:57 GMT
+      Access-Control-Allow-Headers:
+      - Accept, Content-Type, Content-Length, Accept-Encoding, Authorization, User-Agent
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ratelimit-Limit:
+      - '25000'
+      X-Ratelimit-Remaining:
+      - '21890'
+      X-Ratelimit-Reset:
+      - '1733358131'
+      X-Request-Id:
+      - 7b4f4ece-ac09-49af-98b1-9236eea9e2d1
+      X-Runtime:
+      - '0.152147'
+      Set-Cookie:
+      - __cf_bm=MHUj5gbA7BLcCnmUSByG34g308TzEUi62Z8hC3kTFuk-1731173757-1.0.1.1-7L3W4hu_RCi5fBVi1lQPXk64yKu8jZFiLh3u4DcDLeQ2ceKZOEL9Ubkw1DLV60OKMRv9dLEA_XHc1dCbDtFHgQ;
+        path=/; expires=Sat, 09-Nov-24 18:05:57 GMT; domain=.pexels.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=tUc0bV7tUtSQXUp1ycjup.NvkvoedyzLWN9HzoYmvag-1731173757189-0.0.1.1-604800000;
+        path=/; domain=.pexels.com; HttpOnly; Secure; SameSite=None
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"page":1,"per_page":15,"photos":[{"id":2295744,"width":4525,"height":6623,"url":"https://www.pexels.com/photo/photo-of-fox-sitting-on-ground-2295744/","photographer":"Alex
+        Andrews","photographer_url":"https://www.pexels.com/@alex-andrews-271121","photographer_id":271121,"avg_color":"#57534C","src":{"original":"https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg","large2x":"https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Photo
+        of Fox Sitting On Ground"},{"id":134058,"width":4000,"height":2645,"url":"https://www.pexels.com/photo/brown-and-white-fox-on-green-grass-land-134058/","photographer":"monicore","photographer_url":"https://www.pexels.com/@monicore","photographer_id":37786,"avg_color":"#5F554A","src":{"original":"https://images.pexels.com/photos/134058/pexels-photo-134058.jpeg","large2x":"https://images.pexels.com/photos/134058/pexels-photo-134058.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/134058/pexels-photo-134058.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/134058/pexels-photo-134058.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/134058/pexels-photo-134058.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/134058/pexels-photo-134058.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/134058/pexels-photo-134058.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/134058/pexels-photo-134058.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Brown
+        and White Fox on Green Grass Land"},{"id":158340,"width":2500,"height":1662,"url":"https://www.pexels.com/photo/photography-of-tan-white-fox-158340/","photographer":"Pixabay","photographer_url":"https://www.pexels.com/@pixabay","photographer_id":2659,"avg_color":"#6D543A","src":{"original":"https://images.pexels.com/photos/158340/fuchs-wild-animal-predator-animal-world-158340.jpeg","large2x":"https://images.pexels.com/photos/158340/fuchs-wild-animal-predator-animal-world-158340.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/158340/fuchs-wild-animal-predator-animal-world-158340.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/158340/fuchs-wild-animal-predator-animal-world-158340.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/158340/fuchs-wild-animal-predator-animal-world-158340.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/158340/fuchs-wild-animal-predator-animal-world-158340.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/158340/fuchs-wild-animal-predator-animal-world-158340.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/158340/fuchs-wild-animal-predator-animal-world-158340.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Photography
+        of Tan White Fox"},{"id":2121799,"width":4608,"height":2772,"url":"https://www.pexels.com/photo/close-up-photo-of-sleeping-fox-2121799/","photographer":"Joseph
+        Yu","photographer_url":"https://www.pexels.com/@joseph-yu-177551","photographer_id":177551,"avg_color":"#836D54","src":{"original":"https://images.pexels.com/photos/2121799/pexels-photo-2121799.jpeg","large2x":"https://images.pexels.com/photos/2121799/pexels-photo-2121799.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/2121799/pexels-photo-2121799.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/2121799/pexels-photo-2121799.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/2121799/pexels-photo-2121799.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/2121799/pexels-photo-2121799.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/2121799/pexels-photo-2121799.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/2121799/pexels-photo-2121799.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Close-Up
+        Photo of Sleeping Fox"},{"id":158399,"width":5472,"height":3648,"url":"https://www.pexels.com/photo/tan-and-orange-fox-standing-in-water-near-the-grass-158399/","photographer":"Pixabay","photographer_url":"https://www.pexels.com/@pixabay","photographer_id":2659,"avg_color":"#617041","src":{"original":"https://images.pexels.com/photos/158399/fox-wild-nature-water-158399.jpeg","large2x":"https://images.pexels.com/photos/158399/fox-wild-nature-water-158399.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/158399/fox-wild-nature-water-158399.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/158399/fox-wild-nature-water-158399.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/158399/fox-wild-nature-water-158399.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/158399/fox-wild-nature-water-158399.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/158399/fox-wild-nature-water-158399.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/158399/fox-wild-nature-water-158399.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Tan
+        and Orange Fox Standing in Water Near the Grass"},{"id":271932,"width":6016,"height":4000,"url":"https://www.pexels.com/photo/red-fox-lying-on-ground-271932/","photographer":"Pixabay","photographer_url":"https://www.pexels.com/@pixabay","photographer_id":2659,"avg_color":"#806C3F","src":{"original":"https://images.pexels.com/photos/271932/pexels-photo-271932.jpeg","large2x":"https://images.pexels.com/photos/271932/pexels-photo-271932.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/271932/pexels-photo-271932.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/271932/pexels-photo-271932.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/271932/pexels-photo-271932.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/271932/pexels-photo-271932.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/271932/pexels-photo-271932.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/271932/pexels-photo-271932.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Red
+        Fox Lying on Ground"},{"id":57481,"width":3888,"height":2592,"url":"https://www.pexels.com/photo/fox-sticking-it-s-tongue-57481/","photographer":"Pixabay","photographer_url":"https://www.pexels.com/@pixabay","photographer_id":2659,"avg_color":"#7E8D4D","src":{"original":"https://images.pexels.com/photos/57481/fox-red-fox-red-licking-57481.jpeg","large2x":"https://images.pexels.com/photos/57481/fox-red-fox-red-licking-57481.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/57481/fox-red-fox-red-licking-57481.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/57481/fox-red-fox-red-licking-57481.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/57481/fox-red-fox-red-licking-57481.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/57481/fox-red-fox-red-licking-57481.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/57481/fox-red-fox-red-licking-57481.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/57481/fox-red-fox-red-licking-57481.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Fox
+        Sticking It''s Tongue"},{"id":59842,"width":3425,"height":2532,"url":"https://www.pexels.com/photo/brown-fox-in-green-grass-field-during-daytime-59842/","photographer":"Pixabay","photographer_url":"https://www.pexels.com/@pixabay","photographer_id":2659,"avg_color":"#737E51","src":{"original":"https://images.pexels.com/photos/59842/fox-red-fox-red-portrait-59842.jpeg","large2x":"https://images.pexels.com/photos/59842/fox-red-fox-red-portrait-59842.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/59842/fox-red-fox-red-portrait-59842.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/59842/fox-red-fox-red-portrait-59842.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/59842/fox-red-fox-red-portrait-59842.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/59842/fox-red-fox-red-portrait-59842.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/59842/fox-red-fox-red-portrait-59842.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/59842/fox-red-fox-red-portrait-59842.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Brown
+        Fox in Green Grass Field during Daytime"},{"id":918595,"width":5610,"height":3983,"url":"https://www.pexels.com/photo/fox-on-brown-wooden-plank-918595/","photographer":"Egor
+        Kamelev","photographer_url":"https://www.pexels.com/@ekamelev","photographer_id":236647,"avg_color":"#65533B","src":{"original":"https://images.pexels.com/photos/918595/pexels-photo-918595.jpeg","large2x":"https://images.pexels.com/photos/918595/pexels-photo-918595.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/918595/pexels-photo-918595.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/918595/pexels-photo-918595.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/918595/pexels-photo-918595.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/918595/pexels-photo-918595.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/918595/pexels-photo-918595.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/918595/pexels-photo-918595.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Fox
+        on Brown Wooden Plank"},{"id":271905,"width":6016,"height":4000,"url":"https://www.pexels.com/photo/fox-lying-on-rock-271905/","photographer":"Pixabay","photographer_url":"https://www.pexels.com/@pixabay","photographer_id":2659,"avg_color":"#8E866C","src":{"original":"https://images.pexels.com/photos/271905/pexels-photo-271905.jpeg","large2x":"https://images.pexels.com/photos/271905/pexels-photo-271905.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/271905/pexels-photo-271905.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/271905/pexels-photo-271905.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/271905/pexels-photo-271905.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/271905/pexels-photo-271905.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/271905/pexels-photo-271905.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/271905/pexels-photo-271905.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Fox
+        Lying on Rock"},{"id":162291,"width":2500,"height":1662,"url":"https://www.pexels.com/photo/close-up-photo-of-true-fox-animal-at-daytime-162291/","photographer":"Pixabay","photographer_url":"https://www.pexels.com/@pixabay","photographer_id":2659,"avg_color":"#8C6F4F","src":{"original":"https://images.pexels.com/photos/162291/fuchs-wild-animal-predator-animal-world-162291.jpeg","large2x":"https://images.pexels.com/photos/162291/fuchs-wild-animal-predator-animal-world-162291.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/162291/fuchs-wild-animal-predator-animal-world-162291.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/162291/fuchs-wild-animal-predator-animal-world-162291.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/162291/fuchs-wild-animal-predator-animal-world-162291.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/162291/fuchs-wild-animal-predator-animal-world-162291.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/162291/fuchs-wild-animal-predator-animal-world-162291.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/162291/fuchs-wild-animal-predator-animal-world-162291.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Close
+        Up Photo of True Fox Animal at Daytime"},{"id":1587711,"width":2630,"height":2448,"url":"https://www.pexels.com/photo/brown-fox-1587711/","photographer":"Tobias
+        Bjørkli","photographer_url":"https://www.pexels.com/@tobiasbjorkli","photographer_id":706370,"avg_color":"#563F35","src":{"original":"https://images.pexels.com/photos/1587711/pexels-photo-1587711.jpeg","large2x":"https://images.pexels.com/photos/1587711/pexels-photo-1587711.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/1587711/pexels-photo-1587711.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/1587711/pexels-photo-1587711.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/1587711/pexels-photo-1587711.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/1587711/pexels-photo-1587711.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/1587711/pexels-photo-1587711.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/1587711/pexels-photo-1587711.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Brown
+        Fox"},{"id":208976,"width":4200,"height":3300,"url":"https://www.pexels.com/photo/snow-fox-near-brown-rock-208976/","photographer":"Pixabay","photographer_url":"https://www.pexels.com/@pixabay","photographer_id":2659,"avg_color":"#B0AEAE","src":{"original":"https://images.pexels.com/photos/208976/pexels-photo-208976.jpeg","large2x":"https://images.pexels.com/photos/208976/pexels-photo-208976.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/208976/pexels-photo-208976.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/208976/pexels-photo-208976.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/208976/pexels-photo-208976.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/208976/pexels-photo-208976.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/208976/pexels-photo-208976.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/208976/pexels-photo-208976.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Snow
+        Fox Near Brown Rock"},{"id":3739926,"width":4580,"height":3053,"url":"https://www.pexels.com/photo/brown-and-white-fox-on-green-grass-3739926/","photographer":"Dmitry
+        Demidov","photographer_url":"https://www.pexels.com/@dmitry-demidov-515774","photographer_id":515774,"avg_color":"#777255","src":{"original":"https://images.pexels.com/photos/3739926/pexels-photo-3739926.jpeg","large2x":"https://images.pexels.com/photos/3739926/pexels-photo-3739926.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/3739926/pexels-photo-3739926.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/3739926/pexels-photo-3739926.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/3739926/pexels-photo-3739926.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/3739926/pexels-photo-3739926.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/3739926/pexels-photo-3739926.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/3739926/pexels-photo-3739926.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Brown
+        and White Fox on Green Grass"},{"id":247395,"width":2200,"height":1345,"url":"https://www.pexels.com/photo/fox-on-snow-covered-field-in-forest-247395/","photographer":"Pixabay","photographer_url":"https://www.pexels.com/@pixabay","photographer_id":2659,"avg_color":"#706F6E","src":{"original":"https://images.pexels.com/photos/247395/pexels-photo-247395.jpeg","large2x":"https://images.pexels.com/photos/247395/pexels-photo-247395.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/247395/pexels-photo-247395.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/247395/pexels-photo-247395.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/247395/pexels-photo-247395.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/247395/pexels-photo-247395.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/247395/pexels-photo-247395.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/247395/pexels-photo-247395.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Fox
+        on Snow Covered Field in Forest"}],"total_results":945,"next_page":"https://api.pexels.com/v1/search/?page=2\u0026per_page=15\u0026query=fox"}'
+  recorded_at: Sat, 09 Nov 2024 17:35:57 GMT
+- request:
+    method: get
+    uri: https://api.api-ninjas.com/v1/animals?name=wolf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Api-Key:
+      - "<ANIMAL_API_KEY>"
+      User-Agent:
+      - Faraday v2.12.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '11681'
+      Connection:
+      - keep-alive
+      Date:
+      - Sat, 09 Nov 2024 17:35:57 GMT
+      X-Amzn-Trace-Id:
+      - Root=1-672f9d7d-4ed4287e63e0674029e44c9c;Parent=0df809fc605059fe;Sampled=0;Lineage=1:09d9c399:0
+      X-Amzn-Requestid:
+      - 1d66de67-e337-43b9-9c37-bee4fbc64ebb
+      Access-Control-Allow-Origin:
+      - "*"
+      Allow:
+      - GET, OPTIONS, POST
+      Access-Control-Allow-Headers:
+      - "*"
+      X-Amz-Apigw-Id:
+      - A_WLpFYUvHcEQ2A=
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS, POST
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 f0fd475ee39ced21db4c99c5a3fdb1b2.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-P1
+      X-Amz-Cf-Id:
+      - vbdYYt6nbB2PK7hpobrnjOas3N4J3jYo-fMgoGdGIUkjGquApF6_UA==
+    body:
+      encoding: UTF-8
+      string: '[{"name": "Aardwolf", "taxonomy": {"kingdom": "Animalia", "phylum":
+        "Chordata", "class": "Mammalia", "order": "Carnivora", "family": "Hyaenidae",
+        "genus": "Proteles", "scientific_name": "Proteles cristata"}, "locations":
+        ["Africa"], "characteristics": {"prey": "Termites and other insects", "name_of_young":
+        "Cubs or pups", "group_behavior": "Solitary", "biggest_threat": "Habitat loss",
+        "most_distinctive_feature": "The thick mane that runs along the back", "other_name(s)":
+        "Maanhaar-jackal, termite-eating hyena, and civet hyena", "gestation_period":
+        "90 days", "litter_size": "2-5", "habitat": "Savannas and grasslands", "predators":
+        "Jackals, lions, and leopards", "diet": "Carnivore", "type": "mammal", "common_name":
+        "aardwolf", "number_of_species": "1", "location": "Sub-Saharan Africa", "color":
+        "BrownYellowBlack", "skin_type": "Hair", "lifespan": "15 years", "weight":
+        "17-31lbs", "height": "16-20in", "length": "33-41in", "age_of_sexual_maturity":
+        "1.5-2 years", "age_of_weaning": "3-4 months"}}, {"name": "Arctic Wolf", "taxonomy":
+        {"kingdom": "Animalia", "phylum": "Chordata", "class": "Mammalia", "order":
+        "Carnivora", "family": "Canidae", "genus": "Canis", "scientific_name": "Canus
+        Lupus Arcticus"}, "locations": ["North-America"], "characteristics": {"main_prey":
+        "Deer, Elk, Moose", "habitat": "Grass plains and tundra forests", "predators":
+        "Human", "diet": "Carnivore", "average_litter_size": "4", "lifestyle": "Pack",
+        "favorite_food": "Deer", "type": "Mammal", "slogan": "Incredibly versatile
+        and adaptive!", "color": "GreyWhite", "skin_type": "Fur", "top_speed": "46
+        mph", "lifespan": "7 - 10 years", "weight": "25kg - 40kg (55lbs - 88lbs)",
+        "length": "60cm - 91cm (24in - 36in)"}}, {"name": "Czechoslovakian Wolfdog",
+        "taxonomy": {"kingdom": "Animalia", "phylum": "Chordata", "class": "Mammalia",
+        "order": "Carnivora", "family": "Canidae", "genus": "Canis", "scientific_name":
+        "Canis lupus"}, "locations": ["Europe"], "characteristics": {"name_of_young":
+        "puppy", "most_distinctive_feature": "upright, triangle ears", "temperament":
+        "Intelligent, athletic, and loyal", "litter_size": "6-7 puppies", "diet":
+        "Omnivore", "type": "mammal", "origin": "Czechoslovakia and Slovakia", "color":
+        "GreySilver", "skin_type": "Hair", "top_speed": "62 mph", "lifespan": "10-15
+        years"}}, {"name": "Eurasian Wolf", "taxonomy": {"kingdom": "Animalia", "phylum":
+        "Chordata", "class": "Mammalia", "order": "Carnivora", "family": "Canidae",
+        "genus": "Canis", "scientific_name": "Canis lupus lupus"}, "locations": ["Asia",
+        "Eurasia", "Europe"], "characteristics": {"prey": "Moose, deer, wild boar,
+        reindeer, argali, mouflon, wisent, saiga, ibex, chamois, wild goats, etc.",
+        "name_of_young": "pups", "group_behavior": "Pack", "estimated_population_size":
+        "150,000", "biggest_threat": "Deforestation, humans.", "most_distinctive_feature":
+        "Tawny coat", "other_name(s)": "Common wolf, European wolf, Carpathian wolf,
+        steppes wolf, Tibetan wolf, Chinese wolf", "gestation_period": "7 weeks",
+        "litter_size": "6 pups", "habitat": "Tundra, plains, scrublands, mountains.",
+        "predators": "none", "diet": "Carnivore", "type": "mammal", "common_name":
+        "Eurasian Wolf", "number_of_species": "1", "location": "Western Europe, Scandinavia,
+        Russia, China, Mongolia, Himalayan mountains.", "group": "Pack", "color":
+        "GreyRedBlackWhiteCreamTawny", "skin_type": "Fur", "lifespan": "6-8 years,
+        though some live up to 17 years.", "weight": "86 to 174 lbs.", "height": "31
+        to 33 inches, at the shoulder", "length": "41 to 63 inches", "age_of_sexual_maturity":
+        "2 years", "age_of_weaning": "8 weeks"}}, {"name": "Irish WolfHound", "taxonomy":
+        {"kingdom": "Animalia", "phylum": "Chordata", "class": "Mammalia", "order":
+        "Carnivora", "family": "Canidae", "genus": "Canis", "scientific_name": "Canis
+        Lupus"}, "locations": ["Europe"], "characteristics": {"diet": "Omnivore",
+        "common_name": "Irish WolfHound", "slogan": "Sweet-tempered, patient and thoughtful!",
+        "group": "South", "skin_type": "Hair", "lifespan": "9 years", "weight": "54kg
+        (120lbs)"}}, {"name": "Mackenzie Wolf", "taxonomy": {"kingdom": "Animalia",
+        "phylum": "Chordata", "class": "Mammalia", "order": "Carnivora", "family":
+        "Canidae", "genus": "Canis", "scientific_name": "Canis lupus occidentalis"},
+        "locations": ["North-America"], "characteristics": {"prey": "Rodents, moose,
+        bison, elk, caribou, sheep, mountain goats, deer, beavers, salmon, rabbits,
+        squirrels, vole, and lemmings.", "name_of_young": "pup", "group_behavior":
+        "Pack", "estimated_population_size": "40,000+", "biggest_threat": "Grizzly
+        bears, polar bears, tigers, scavengers, and humans.", "most_distinctive_feature":
+        "gray coat", "other_name(s)": "Northwestern wolf, Mackenzie Valley wolf, Rocky
+        Mountain wolf, Alaskan timber wolf, or Canadian timber wolf.", "gestation_period":
+        "Approximately 63 days", "litter_size": "4-6 pups", "habitat": "Mountains,
+        forests.", "predators": "Grizzly bears, polar bears, tigers, scavengers, and
+        humans.", "diet": "Carnivore", "type": "Mammal", "common_name": "Northwestern
+        wolf", "number_of_species": "1", "location": "Western North America", "color":
+        "GreyWhite", "skin_type": "Fur", "top_speed": "40 mph", "lifespan": "6-8 years,
+        though some can live up to 17 years in captivity", "weight": "85-153 lbs",
+        "height": "32-40 inches tall", "age_of_sexual_maturity": "2 years for females,
+        3 years for males.", "age_of_weaning": "8 weeks"}}, {"name": "Maned Wolf",
+        "taxonomy": {"kingdom": "Animalia", "phylum": "Chordata", "class": "Mammalia",
+        "order": "Carnivora", "family": "Canidae", "genus": "Chrysocyon", "scientific_name":
+        "Chyrsocyon brachyurus"}, "locations": ["South-America"], "characteristics":
+        {"prey": "Small- to medium-sized animals including rodents, birds, fish, and
+        rabbits; vegetable matter including tubers, fruit, and sugarcane", "name_of_young":
+        "Pup", "group_behavior": "Solitary", "estimated_population_size": "23,600",
+        "biggest_threat": "Habitat destruction", "most_distinctive_feature": "Reddish
+        brown or golden orange fur with a black mane", "gestation_period": "60 to
+        65 days", "litter_size": "2 to 6 pups", "habitat": "Semi-open habitats such
+        as grasslands, forests, and scrub prairies", "predators": "Jaguars and pumas",
+        "diet": "Omnivore", "lifestyle": "NocturnalCrepuscular", "common_name": "Maned
+        Wolf", "number_of_species": "1", "location": "Central and eastern South America",
+        "group": "Mammal", "color": "BrownBlackOrange", "skin_type": "Fur", "top_speed":
+        "47 mph", "lifespan": "12 to 15 years", "weight": "51 pounds", "height": "35
+        inches", "length": "39 inches (additional 18 inches including tail)", "age_of_sexual_maturity":
+        "1 year", "age_of_weaning": "4 months"}}, {"name": "Red Wolf", "taxonomy":
+        {"kingdom": "Animalia", "phylum": "Chordata", "class": "Mammalia", "order":
+        "Carnivora", "family": "Canidae", "genus": "Canis", "scientific_name": "Canis
+        lupus rufus"}, "locations": ["North-America"], "characteristics": {"main_prey":
+        "Deer, Rodents, Raccoons", "name_of_young": "Cub", "distinctive_feature":
+        "Reddish fur and thin white legs", "habitat": "Coastal prairie and marshland",
+        "predators": "Wolves, Coyotes, Humans", "diet": "Carnivore", "average_litter_size":
+        "5", "lifestyle": "Pack", "favorite_food": "Deer", "type": "Mammal", "slogan":
+        "Only 100 in the wild!", "color": "BrownGreyRedBlackWhite", "skin_type": "Fur",
+        "top_speed": "46 mph", "lifespan": "10 - 12 years", "weight": "18kg - 41kg
+        (40lbs - 90lbs)", "length": "95cm - 120cm (37in - 47in)"}}, {"name": "Saarloos
+        Wolfdog", "taxonomy": {"kingdom": "Animalia", "phylum": "Chordata", "class":
+        "Mammalia", "order": "Carnivora", "family": "Canidae", "genus": "Canis", "scientific_name":
+        "Canis lupus"}, "locations": ["Europe"], "characteristics": {"diet": "Omnivore",
+        "skin_type": "Hair"}}, {"name": "Wolf", "taxonomy": {"kingdom": "Animalia",
+        "phylum": "Chordata", "class": "Mammalia", "order": "Carnivora", "family":
+        "Canidae", "genus": "Canis", "scientific_name": "Canis lupus"}, "locations":
+        ["Africa", "Asia", "Central-America", "Eurasia", "Europe", "North-America",
+        "South-America"], "characteristics": {"main_prey": "Deer, Elk, Moose", "habitat":
+        "Grass plains and woodland", "predators": "Human", "diet": "Carnivore", "average_litter_size":
+        "4", "lifestyle": "Pack", "favorite_food": "Deer", "type": "Mammal", "slogan":
+        "Thought to date back more than 300,000 years!", "color": "BrownGreyBlackWhite",
+        "skin_type": "Fur", "top_speed": "46 mph", "lifespan": "10-12 years", "weight":
+        "80-150lbs"}}, {"name": "Wolf Eel", "taxonomy": {"kingdom": "Animalia", "phylum":
+        "Chordata", "class": "Actinopterygii", "order": "Perciformes", "family": "Anarhichadidae",
+        "genus": "Anarrhichthys", "scientific_name": "Anarrhichthys ocellatus"}, "locations":
+        ["Ocean"], "characteristics": {"prey": "Crabs, sand dollars, abalone, sea
+        urchins, clams, mussels, fish, and squid", "group_behavior": "Solitary/Pairs",
+        "estimated_population_size": "unknown", "biggest_threat": "Harbor seals",
+        "most_distinctive_feature": "Powerful jaws and sharp teeth", "gestation_period":
+        " 91 to 112 days", "habitat": "Ocean", "predators": "Harbor seals and sharks",
+        "diet": "Carnivore", "favorite_food": "Crabs, sand dollars, abalone, sea urchins,
+        clams, mussels, fish, and squid", "common_name": "Wolf Eel", "number_of_species":
+        "-2", "color": "BrownGreyGreen", "skin_type": "Scales", "lifespan": "25 years",
+        "weight": "41 pounds", "length": "Up to 8 feet"}}, {"name": "Wolf Snake",
+        "taxonomy": {"kingdom": "Animalia", "phylum": "Chordata", "class": "Reptilia",
+        "order": "Squamata", "family": "Colubridae", "genus": "Lycodon", "scientific_name":
+        "Lycodon capucinus"}, "locations": ["Asia"], "characteristics": {"diet": "Omnivore",
+        "average_litter_size": "3 to 11", "common_name": "Wolf snake", "color": "GreyYellowBlackWhite",
+        "lifespan": "About 10 years", "length": "20 inches", "venomous": "Yes", "aggression":
+        "Medium"}}, {"name": "Wolf Spider", "taxonomy": {"kingdom": "Animalia", "phylum":
+        "Arthropoda", "class": "Arachnida", "order": "Araneae", "family": "Lycosidae"},
+        "locations": ["Africa", "Asia", "Central-America", "Eurasia", "Europe", "North-America",
+        "Oceania", "South-America"], "characteristics": {"name_of_young": "Spiderling",
+        "group_behavior": "Solitary", "most_distinctive_feature": "Large eyes and
+        mouth parts", "habitat": "Forests, plains, deserts, wetlands, and more", "predators":
+        "Birds, reptiles, and rodents", "diet": "Omnivore", "favorite_food": "Ants,
+        beetles, crickets, and other insects", "common_name": "Wolf Spider", "location":
+        "All continents besides Antarctica", "slogan": "Carnivorous arachnid that
+        hunts its prey.", "group": "Spider", "color": "Black", "skin_type": "Hair",
+        "lifespan": "1 to 2 years", "weight": "Less than 1oz (30g )", "length": "0.24in
+        \u2013 1.2in (0.6cm - 3cm), body only", "age_of_sexual_maturity": "A few weeks"}},
+        {"name": "Wolffish", "taxonomy": {"kingdom": "Animalia", "phylum": "Chordata",
+        "class": "Actinopterygii", "order": "Perciformes", "family": "Anarhichadidae",
+        "scientific_name": "Anarhichadidae"}, "locations": ["Ocean"], "characteristics":
+        {"prey": "Crabs, clams, sea urchins, starfish, and others", "group_behavior":
+        "Solitary/Pairs", "estimated_population_size": "Unknown", "biggest_threat":
+        "Habitat destruction and accidental catches", "most_distinctive_feature":
+        "The long eel-like body and sharp teeth", "other_name(s)": "Sea wolf", "gestation_period":
+        "Three to nine months", "habitat": "Coastal waters", "predators": "Sharks
+        and humans", "diet": "Carnivore", "type": "Fish", "common_name": "Wolffish",
+        "number_of_species": "5", "color": "BrownGreyBlueWhiteGreen", "skin_type":
+        "Scales", "lifespan": "At least 12 years", "weight": "Up to 50 pounds", "length":
+        "Up to 7.5 feet"}}]'
+  recorded_at: Sat, 09 Nov 2024 17:35:57 GMT
+- request:
+    method: get
+    uri: https://api.pexels.com/v1/search?query=wolf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - "<PEXEL_API_KEY>"
+      User-Agent:
+      - Faraday v2.12.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 09 Nov 2024 17:35:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 8dff8ff05890e672-DEN
+      Cf-Cache-Status:
+      - HIT
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=86400
+      Etag:
+      - W/"ac720d14140f527ca668c64bbb450771"
+      Expires:
+      - Sun, 10 Nov 2024 17:35:57 GMT
+      Access-Control-Allow-Headers:
+      - Accept, Content-Type, Content-Length, Accept-Encoding, Authorization, User-Agent
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ratelimit-Limit:
+      - '25000'
+      X-Ratelimit-Remaining:
+      - '21889'
+      X-Ratelimit-Reset:
+      - '1733358131'
+      X-Request-Id:
+      - aa00cf1a-0fc6-4037-a56b-0e9ef7723d02
+      X-Runtime:
+      - '0.105507'
+      Set-Cookie:
+      - __cf_bm=p6efiJxnugsTTzxXBXgQxyyYDFSBo5YWrXUfJeutY1c-1731173757-1.0.1.1-z4B.beoYtTjvJk6n_jn8oGQeE_6F.DU5.yUfhMo0mHVLwNA_2oSjVg2fxxJzmKm4binriA22UWtEgpgVIYEzhQ;
+        path=/; expires=Sat, 09-Nov-24 18:05:57 GMT; domain=.pexels.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=sghMnCzB_jujVWBshCv.7QjX18cTpTt2SiiTJ75yuSw-1731173757629-0.0.1.1-604800000;
+        path=/; domain=.pexels.com; HttpOnly; Secure; SameSite=None
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"page":1,"per_page":15,"photos":[{"id":682375,"width":4288,"height":2848,"url":"https://www.pexels.com/photo/brown-wolf-682375/","photographer":"Steve","photographer_url":"https://www.pexels.com/@steve-130217","photographer_id":130217,"avg_color":"#5C534D","src":{"original":"https://images.pexels.com/photos/682375/pexels-photo-682375.jpeg","large2x":"https://images.pexels.com/photos/682375/pexels-photo-682375.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/682375/pexels-photo-682375.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/682375/pexels-photo-682375.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/682375/pexels-photo-682375.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/682375/pexels-photo-682375.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/682375/pexels-photo-682375.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/682375/pexels-photo-682375.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Brown
+        Wolf"},{"id":397857,"width":2048,"height":1360,"url":"https://www.pexels.com/photo/white-and-black-wolf-397857/","photographer":"Steve","photographer_url":"https://www.pexels.com/@steve-130217","photographer_id":130217,"avg_color":"#6E573E","src":{"original":"https://images.pexels.com/photos/397857/pexels-photo-397857.jpeg","large2x":"https://images.pexels.com/photos/397857/pexels-photo-397857.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/397857/pexels-photo-397857.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/397857/pexels-photo-397857.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/397857/pexels-photo-397857.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/397857/pexels-photo-397857.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/397857/pexels-photo-397857.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/397857/pexels-photo-397857.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"White
+        and Black Wolf"},{"id":247583,"width":3643,"height":2297,"url":"https://www.pexels.com/photo/silhouette-dog-on-landscape-against-romantic-sky-at-sunset-247583/","photographer":"Pixabay","photographer_url":"https://www.pexels.com/@pixabay","photographer_id":2659,"avg_color":"#2F1B19","src":{"original":"https://images.pexels.com/photos/247583/pexels-photo-247583.jpeg","large2x":"https://images.pexels.com/photos/247583/pexels-photo-247583.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/247583/pexels-photo-247583.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/247583/pexels-photo-247583.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/247583/pexels-photo-247583.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/247583/pexels-photo-247583.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/247583/pexels-photo-247583.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/247583/pexels-photo-247583.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Silhouette
+        Dog on Landscape Against Romantic Sky at Sunset"},{"id":1573134,"width":6000,"height":4000,"url":"https://www.pexels.com/photo/white-wolf-on-floor-1573134/","photographer":"Luna
+        Lovegood","photographer_url":"https://www.pexels.com/@hotaru","photographer_id":171087,"avg_color":"#3F4C47","src":{"original":"https://images.pexels.com/photos/1573134/pexels-photo-1573134.jpeg","large2x":"https://images.pexels.com/photos/1573134/pexels-photo-1573134.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/1573134/pexels-photo-1573134.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/1573134/pexels-photo-1573134.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/1573134/pexels-photo-1573134.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/1573134/pexels-photo-1573134.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/1573134/pexels-photo-1573134.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/1573134/pexels-photo-1573134.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"White
+        Wolf on Floor"},{"id":39310,"width":4320,"height":2880,"url":"https://www.pexels.com/photo/gray-and-white-wolf-39310/","photographer":"Pixabay","photographer_url":"https://www.pexels.com/@pixabay","photographer_id":2659,"avg_color":"#473C34","src":{"original":"https://images.pexels.com/photos/39310/wolf-predator-hunter-canis-lupus-39310.jpeg","large2x":"https://images.pexels.com/photos/39310/wolf-predator-hunter-canis-lupus-39310.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/39310/wolf-predator-hunter-canis-lupus-39310.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/39310/wolf-predator-hunter-canis-lupus-39310.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/39310/wolf-predator-hunter-canis-lupus-39310.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/39310/wolf-predator-hunter-canis-lupus-39310.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/39310/wolf-predator-hunter-canis-lupus-39310.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/39310/wolf-predator-hunter-canis-lupus-39310.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Gray
+        and White Wolf"},{"id":162256,"width":6000,"height":4000,"url":"https://www.pexels.com/photo/brown-wolf-standing-on-green-grass-162256/","photographer":"Pixabay","photographer_url":"https://www.pexels.com/@pixabay","photographer_id":2659,"avg_color":"#526F42","src":{"original":"https://images.pexels.com/photos/162256/wolf-predator-european-wolf-carnivores-162256.jpeg","large2x":"https://images.pexels.com/photos/162256/wolf-predator-european-wolf-carnivores-162256.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/162256/wolf-predator-european-wolf-carnivores-162256.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/162256/wolf-predator-european-wolf-carnivores-162256.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/162256/wolf-predator-european-wolf-carnivores-162256.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/162256/wolf-predator-european-wolf-carnivores-162256.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/162256/wolf-predator-european-wolf-carnivores-162256.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/162256/wolf-predator-european-wolf-carnivores-162256.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Brown
+        Wolf Standing on Green Grass"},{"id":682361,"width":4288,"height":2848,"url":"https://www.pexels.com/photo/grey-and-white-wolf-selective-focus-photography-682361/","photographer":"Steve","photographer_url":"https://www.pexels.com/@steve-130217","photographer_id":130217,"avg_color":"#5F5851","src":{"original":"https://images.pexels.com/photos/682361/pexels-photo-682361.jpeg","large2x":"https://images.pexels.com/photos/682361/pexels-photo-682361.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/682361/pexels-photo-682361.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/682361/pexels-photo-682361.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/682361/pexels-photo-682361.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/682361/pexels-photo-682361.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/682361/pexels-photo-682361.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/682361/pexels-photo-682361.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Grey
+        and White Wolf Selective Focus Photography"},{"id":1074882,"width":6720,"height":3780,"url":"https://www.pexels.com/photo/gray-timber-wolf-1074882/","photographer":"Matej","photographer_url":"https://www.pexels.com/@matej-117839","photographer_id":117839,"avg_color":"#060606","src":{"original":"https://images.pexels.com/photos/1074882/pexels-photo-1074882.jpeg","large2x":"https://images.pexels.com/photos/1074882/pexels-photo-1074882.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/1074882/pexels-photo-1074882.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/1074882/pexels-photo-1074882.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/1074882/pexels-photo-1074882.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/1074882/pexels-photo-1074882.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/1074882/pexels-photo-1074882.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/1074882/pexels-photo-1074882.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Gray
+        Timber Wolf"},{"id":69350,"width":6016,"height":4016,"url":"https://www.pexels.com/photo/gray-and-white-wolf-69350/","photographer":"Amar
+        Saleem","photographer_url":"https://www.pexels.com/@amar-saleem-15661","photographer_id":15661,"avg_color":"#53544A","src":{"original":"https://images.pexels.com/photos/69350/pexels-photo-69350.jpeg","large2x":"https://images.pexels.com/photos/69350/pexels-photo-69350.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/69350/pexels-photo-69350.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/69350/pexels-photo-69350.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/69350/pexels-photo-69350.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/69350/pexels-photo-69350.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/69350/pexels-photo-69350.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/69350/pexels-photo-69350.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Gray
+        and White Wolf"},{"id":918596,"width":2537,"height":1981,"url":"https://www.pexels.com/photo/gray-husky-918596/","photographer":"Egor
+        Kamelev","photographer_url":"https://www.pexels.com/@ekamelev","photographer_id":236647,"avg_color":"#645F51","src":{"original":"https://images.pexels.com/photos/918596/pexels-photo-918596.jpeg","large2x":"https://images.pexels.com/photos/918596/pexels-photo-918596.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/918596/pexels-photo-918596.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/918596/pexels-photo-918596.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/918596/pexels-photo-918596.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/918596/pexels-photo-918596.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/918596/pexels-photo-918596.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/918596/pexels-photo-918596.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Gray
+        Husky"},{"id":531533,"width":3156,"height":1945,"url":"https://www.pexels.com/photo/alaskan-malamute-on-snow-covered-ground-531533/","photographer":"Pixabay","photographer_url":"https://www.pexels.com/@pixabay","photographer_id":2659,"avg_color":"#96A2B0","src":{"original":"https://images.pexels.com/photos/531533/pexels-photo-531533.jpeg","large2x":"https://images.pexels.com/photos/531533/pexels-photo-531533.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/531533/pexels-photo-531533.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/531533/pexels-photo-531533.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/531533/pexels-photo-531533.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/531533/pexels-photo-531533.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/531533/pexels-photo-531533.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/531533/pexels-photo-531533.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Alaskan
+        Malamute on Snow-covered Ground"},{"id":755447,"width":7360,"height":4912,"url":"https://www.pexels.com/photo/beige-and-gray-wolf-on-the-green-grass-755447/","photographer":"Adriaan
+        Greyling","photographer_url":"https://www.pexels.com/@monkeytactics","photographer_id":234777,"avg_color":"#8D7C52","src":{"original":"https://images.pexels.com/photos/755447/pexels-photo-755447.jpeg","large2x":"https://images.pexels.com/photos/755447/pexels-photo-755447.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/755447/pexels-photo-755447.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/755447/pexels-photo-755447.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/755447/pexels-photo-755447.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/755447/pexels-photo-755447.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/755447/pexels-photo-755447.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/755447/pexels-photo-755447.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Beige
+        and Gray Wolf on the Green Grass"},{"id":397863,"width":4288,"height":2848,"url":"https://www.pexels.com/photo/wolf-standing-on-stone-397863/","photographer":"Steve","photographer_url":"https://www.pexels.com/@steve-130217","photographer_id":130217,"avg_color":"#615A53","src":{"original":"https://images.pexels.com/photos/397863/pexels-photo-397863.jpeg","large2x":"https://images.pexels.com/photos/397863/pexels-photo-397863.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/397863/pexels-photo-397863.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/397863/pexels-photo-397863.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/397863/pexels-photo-397863.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/397863/pexels-photo-397863.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/397863/pexels-photo-397863.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/397863/pexels-photo-397863.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Wolf
+        Standing on Stone"},{"id":162110,"width":6000,"height":4000,"url":"https://www.pexels.com/photo/tan-wolf-on-flower-field-during-daytime-162110/","photographer":"Pixabay","photographer_url":"https://www.pexels.com/@pixabay","photographer_id":2659,"avg_color":"#4C5948","src":{"original":"https://images.pexels.com/photos/162110/wolf-predator-european-wolf-carnivores-162110.jpeg","large2x":"https://images.pexels.com/photos/162110/wolf-predator-european-wolf-carnivores-162110.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/162110/wolf-predator-european-wolf-carnivores-162110.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/162110/wolf-predator-european-wolf-carnivores-162110.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/162110/wolf-predator-european-wolf-carnivores-162110.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/162110/wolf-predator-european-wolf-carnivores-162110.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/162110/wolf-predator-european-wolf-carnivores-162110.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/162110/wolf-predator-european-wolf-carnivores-162110.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Tan
+        Wolf on Flower Field during Daytime"},{"id":163189,"width":3200,"height":2147,"url":"https://www.pexels.com/photo/wolf-howling-in-the-forest-163189/","photographer":"Pixabay","photographer_url":"https://www.pexels.com/@pixabay","photographer_id":2659,"avg_color":"#6C5834","src":{"original":"https://images.pexels.com/photos/163189/wolf-white-wolf-white-fur-zoo-163189.jpeg","large2x":"https://images.pexels.com/photos/163189/wolf-white-wolf-white-fur-zoo-163189.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=2\u0026h=650\u0026w=940","large":"https://images.pexels.com/photos/163189/wolf-white-wolf-white-fur-zoo-163189.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=650\u0026w=940","medium":"https://images.pexels.com/photos/163189/wolf-white-wolf-white-fur-zoo-163189.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=350","small":"https://images.pexels.com/photos/163189/wolf-white-wolf-white-fur-zoo-163189.jpeg?auto=compress\u0026cs=tinysrgb\u0026h=130","portrait":"https://images.pexels.com/photos/163189/wolf-white-wolf-white-fur-zoo-163189.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=1200\u0026w=800","landscape":"https://images.pexels.com/photos/163189/wolf-white-wolf-white-fur-zoo-163189.jpeg?auto=compress\u0026cs=tinysrgb\u0026fit=crop\u0026h=627\u0026w=1200","tiny":"https://images.pexels.com/photos/163189/wolf-white-wolf-white-fur-zoo-163189.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},"liked":false,"alt":"Wolf
+        Howling in the Forest"}],"total_results":1001,"next_page":"https://api.pexels.com/v1/search/?page=2\u0026per_page=15\u0026query=wolf"}'
+  recorded_at: Sat, 09 Nov 2024 17:35:57 GMT
+recorded_with: VCR 6.3.1
