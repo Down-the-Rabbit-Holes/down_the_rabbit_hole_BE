@@ -12,7 +12,7 @@ Animal.create!(
     name: "rabbit", 
     photo_url: "https://images.pexels.com/photos/326012/pexels-photo-326012.jpeg", 
     prey: "Clover, Grass, Crunchy vegetables",
-    predators: "Fox, wolf, owl, bobcat, weasel, stoat, hawk", 
+    predators: "Fox, wolf, owl, bobcat, weasel, stoat, hawk, raccoon, mink,", 
     habitat: "forest thickets, meadows and woodland",
     fun_fact: "There are more than 50 different species!",
     top_speed: "18 miles per hour",
@@ -76,7 +76,6 @@ Animal.create!(
     life_span: "15 years in captivity, less in the wild",
     weight: "29-90kg (64-198lbs)",
     diet: "Carnivore"
-
     )
     
 

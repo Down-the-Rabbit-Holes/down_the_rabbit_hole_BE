@@ -10,6 +10,7 @@ class Api::V1::AnimalsController < ApplicationController
       end
     elsif params[:action_type] == "eat_me"
       animal = Animal.find_by(name: params[:animal_name])
+      Animal.handle_predator_creation(animal) if animal
       predators_data = animal.predators_with_data
       render json: AnimalSerializer.new(predators_data)
     end
