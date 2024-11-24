@@ -1,0 +1,2 @@
+class PredatorPreyRelation < ApplicationRecord
+end
