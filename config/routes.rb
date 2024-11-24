@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get "/api/v1/users/:user_id/user_favorites", to: "api/v1/user_favorites#index"
   post "/api/v1/users/:user_id/user_favorites",  to: "api/v1/user_favorites#create"
   delete "/api/v1/users/:user_id/user_favorites/:animal_id", to: "api/v1/user_favorites#destroy"
+
+  get "/api/v1/animals/:id/videos", to: "api/v1/videos#show"
 end

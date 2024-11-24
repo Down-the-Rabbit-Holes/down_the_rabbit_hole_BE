@@ -82,6 +82,7 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.filter_sensitive_data('<ANIMAL_API_KEY>') { Rails.application.credentials.ninja_animals[:key] }
   config.filter_sensitive_data('<PEXEL_API_KEY>') { Rails.application.credentials.pexels[:key] }
+  config.filter_sensitive_data('<YOUTUBE_API_KEY>') { Rails.application.credentials.youtube_data_api[:key] }
   config.default_cassette_options = { re_record_interval: 7.days }
   config.configure_rspec_metadata!
   config.allow_http_connections_when_no_cassette = true
