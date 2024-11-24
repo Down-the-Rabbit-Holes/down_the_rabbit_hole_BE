@@ -93,82 +93,86 @@
 # )
 # db/seeds.rb
 require 'csv'
-csv_text = File.read(Rails.root.join('db', 'test_animals.csv'))
-csv = CSV.parse(csv_text, headers: true)
-
-csv.each do |row|
-  Animal.create!(
-    name: row['name'],
-    scientific_name: row['scientific_name'],
-    photo_url: row['photo_url'],
-    # description: row['description'],
-    top_speed: row['top_speed'],
-    life_span: row['life_span'],
-    weight: row['weight'],
-    # height: row['height'],
-    # length: row['length'],
-    habitat: row['habitat'],
-    # predators: row['predators'],
-    # prey: row['prey'],
-    fun_fact: row['fun_fact'],
-    # animal_type: row['animal_type'],
-    diet: row['diet']
-  )
-end
-# # Step 1: Create a park
-# rmnp = Park.create!(
-#   name: 'Rocky Mountain National Park',
-#   location: 'Colorado, USA',
-#   description: 'A beautiful national park known for its wildlife.'
-# )
-
-# # Step 2: Create animals and associate them with the park
-# csv_text = File.read(Rails.root.join('db', 'test_animals.csv')) # Adjust path to 'db'
+# csv_text = File.read(Rails.root.join('db', 'new_test_animals.csv'))
 # csv = CSV.parse(csv_text, headers: true)
-# animals_by_name = {}
 
 # csv.each do |row|
-#   animal = Animal.create!(
+#   Animal.create!(
 #     name: row['name'],
-#     photo_url: row['photo_url'],
-#     habitat: row['habitat'],
 #     scientific_name: row['scientific_name'],
-#     diet: row['diet'],
+#     photo_url: row['photo_url'],
+#     # description: row['description'],
 #     top_speed: row['top_speed'],
 #     life_span: row['life_span'],
 #     weight: row['weight'],
-#     fun_fact: row['fun_fact']
+#     # height: row['height'],
+#     # length: row['length'],
+#     habitat: row['habitat'],
+#     # predators: row['predators'],
+#     # prey: row['prey'],
+#     fun_fact: row['fun_fact'],
+#     # animal_type: row['animal_type'],
+#     diet: row['diet'],
+#     park: row['park']
 #   )
-
-#   # Associate with RMNP
-#   ParkAnimal.create!(park: rmnp, animal: animal)
-
-#   # Add animal to lookup hash for relationships
-#   animals_by_name[animal.name.downcase] = animal
 # end
+# # Step 1: Create a park
+rmnp = Park.create!(
+  name: 'Rocky Mountain National Park',
+  location: 'Colorado, USA',
+  description: 'A beautiful national park known for its wildlife.',
+  annual_visitors: '4.1 million visitors'
+)
+
+# # Step 2: Create animals and associate them with the park
+csv_text = File.read(Rails.root.join('db', 'new_test_animals.csv')) # Adjust path to 'db'
+csv = CSV.parse(csv_text, headers: true)
+animals_by_name = {}
+
+csv.each do |row|
+  animal = Animal.create!(
+    name: row['name'],
+    photo_url: row['photo_url'],
+    habitat: row['habitat'],
+    scientific_name: row['scientific_name'],
+    diet: row['diet'],
+    top_speed: row['top_speed'],
+    life_span: row['life_span'],
+    weight: row['weight'],
+    fun_fact: row['fun_fact']
+  )
+
+  # Associate with RMNP
+  ParkAnimal.create!(park: rmnp, animal: animal)
+
+  # Add animal to lookup hash for relationships
+  animals_by_name[animal.name.downcase] = animal
+end
 
 # # Step 3: Add predator-prey relationships
-# csv.each do |row|
-#   animal = animals_by_name[row['name'].downcase]
+csv.each do |row|
+  animal = animals_by_name[row['name'].downcase]
 
-#   # Add predators
-#   if row['predators']
-#     predator_names = row['predators'].split(',').map(&:strip)
-#     predator_names.each do |predator_name|
-#       predator = animals_by_name[predator_name.downcase]
-#       PredatorPreyRelation.create!(predator: predator, prey: animal) if predator
-#     end
-#   end
+  # Add predators
+  if row['predators']
+    predator_names = row['predators'].split(',').map(&:strip)
+    predator_names.each do |predator_name|
+      predator = animals_by_name[predator_name.downcase]
+      PredatorPreyRelation.find_or_create_by!(predator: predator, prey: animal) if predator
+      # PredatorPreyRelation.create!(predator: predator, prey: animal) if predator
+    end
+  end
 
-#   # Add prey
-#   if row['prey']
-#     prey_names = row['prey'].split(',').map(&:strip)
-#     prey_names.each do |prey_name|
-#       prey = animals_by_name[prey_name.downcase]
-#       PredatorPreyRelation.create!(predator: animal, prey: prey) if prey
-#     end
-#   end
-# end
+  # Add prey
+  if row['prey']
+    prey_names = row['prey'].split(',').map(&:strip)
+    prey_names.each do |prey_name|
+      prey = animals_by_name[prey_name.downcase]
+      PredatorPreyRelation.find_or_create_by!(predator: animal, prey: prey) if prey
+      # PredatorPreyRelation.create!(predator: animal, prey: prey) if prey
+    end
+  end
+end
 
 User.create!(
     name: "Jim"

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   get "/api/v1/animals", to: "api/v1/animals#index"
+  get "/api/v1/animals/:id", to: "api/v1/animals#show"
   get "/api/v1/users/:user_id/user_favorites", to: "api/v1/user_favorites#index"
   post "/api/v1/users/:user_id/user_favorites",  to: "api/v1/user_favorites#create"
   delete "/api/v1/users/:user_id/user_favorites/:animal_id", to: "api/v1/user_favorites#destroy"
