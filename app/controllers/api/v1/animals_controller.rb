@@ -1,4 +1,43 @@
 class Api::V1::AnimalsController < ApplicationController
+  def show
+    animal = Animal.find_by(name: params[:name])
+    if animal
+      render json: AnimalSerializer.new(animal)
+    else
+      render json: { error: "Animal not found" }, status: :not_found
+    end
+  end
+
+  def predators
+    animal = Animal.find_by(name: params[:name])
+    if animal
+      render json: AnimalSerializer.new(animal.predators)
+    else
+      render json: { error: "Animal not found" }, status: :not_found
+    end
+  end
+
+  def prey
+    animal = Animal.find_by(name: params[:name])
+    if animal
+      render json: AnimalSerializer.new(animal.prey)
+    else
+      render json: { error: "Animal not found" }, status: :not_found
+    end
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+end
   # def index
   #   if params[:action_type] == "start" || params[:action_type] == "selected_animal"
   #     animal = Animal.find_animal(animal_params)
@@ -16,21 +55,21 @@ class Api::V1::AnimalsController < ApplicationController
   #   end
   # end
 
-  def index
-    # return either all predators or all prey
-    # OR
-    # do this in the relations table
-  end
-
-  def show
-    # return the one animal
-    animal = Animal.find(params[:id])
-    render json: AnimalSerializer.new(animal)
-  end
-
-  private
-  
-  # def animal_params
-  #   params.require(:animal).permit(:id, :name, :action_type)
+  # def index
+  #   # return either all predators or all prey
+  #   # OR
+  #   # do this in the relations table
   # end
-end
+
+  # def show
+  #   # return the one animal
+  #   animal = Animal.find(params[:id])
+  #   render json: AnimalSerializer.new(animal)
+  # end
+
+  # private
+  
+  # # def animal_params
+  # #   params.require(:animal).permit(:id, :name, :action_type)
+  # # end
+# end

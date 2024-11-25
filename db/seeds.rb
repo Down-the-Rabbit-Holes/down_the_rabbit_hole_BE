@@ -131,7 +131,7 @@ animals_by_name = {}
 
 csv.each do |row|
   animal = Animal.create!(
-    name: row['name'],
+    name: row['name'].singularize,
     photo_url: row['photo_url'],
     habitat: row['habitat'],
     scientific_name: row['scientific_name'],
@@ -155,7 +155,7 @@ csv.each do |row|
 
   # Add predators
   if row['predators']
-    predator_names = row['predators'].split(',').map(&:strip)
+    predator_names = row['predators'].split(',').map { |name| name.singularize.strip }
     predator_names.each do |predator_name|
       predator = animals_by_name[predator_name.downcase]
       PredatorPreyRelation.find_or_create_by!(predator: predator, prey: animal) if predator
@@ -165,7 +165,7 @@ csv.each do |row|
 
   # Add prey
   if row['prey']
-    prey_names = row['prey'].split(',').map(&:strip)
+    prey_names = row['prey'].split(',').map { |name| name.singularize.strip }
     prey_names.each do |prey_name|
       prey = animals_by_name[prey_name.downcase]
       PredatorPreyRelation.find_or_create_by!(predator: animal, prey: prey) if prey

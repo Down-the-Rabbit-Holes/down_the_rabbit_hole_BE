@@ -2,8 +2,8 @@ class AnimalSerializer
   include JSONAPI::Serializer
   attributes :name,
              :photo_url,
-             :prey, 
-             :predators, 
+            #  :prey, 
+            #  :predators, 
              :habitat, 
              :scientific_name,
              :diet,
@@ -11,4 +11,8 @@ class AnimalSerializer
              :life_span,
              :weight,
              :fun_fact
+
+             has_many :prey
+             has_many :predators
+             has_many :parks
 end
