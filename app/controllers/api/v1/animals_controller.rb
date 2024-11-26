@@ -27,5 +27,4 @@ class Api::V1::AnimalsController < ApplicationController
   def filter_params
     params.permit(:predators, :prey)
   end
-
 end
