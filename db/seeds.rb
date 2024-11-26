@@ -137,7 +137,7 @@ rmnp = Park.create!(
 )
 
 # # Step 2: Create animals and associate them with the park
-csv_text = File.read(Rails.root.join('db', 'new_test_animals.csv')) # Adjust path to 'db'
+csv_text = File.read(Rails.root.join('db', 'third_test_animals_csv.csv')) # Adjust path to 'db'
 csv = CSV.parse(csv_text, headers: true)
 animals_by_name = {}
 
