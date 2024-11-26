@@ -22,6 +22,6 @@ class VideoGateway
     data = JSON.parse(response.body, symbolize_names: true)
     items = data[:items]
 
-    items.any? ? Video.new(items.first) : nil
+    items.any? ? items.first : nil
   end
 end
