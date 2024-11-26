@@ -12,5 +12,5 @@ class AnimalSerializer
 
              has_many :prey, serializer: AnimalSerializer
              has_many :predators, serializer: AnimalSerializer
-            #  has_many :parks, serializer: ParkSerializer
+             has_many :parks, serializer: ParkSerializer
 end
