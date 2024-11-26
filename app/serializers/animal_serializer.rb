@@ -12,7 +12,7 @@ class AnimalSerializer
              :weight,
              :fun_fact
 
-             has_many :prey
-             has_many :predators
-             has_many :parks
+             has_many :prey, serializer: AnimalSerializer
+             has_many :predators, serializer: AnimalSerializer
+            #  has_many :parks, serializer: ParkSerializer
 end
