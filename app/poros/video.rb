@@ -2,11 +2,11 @@ class Video
 
   attr_reader :video_id, :title, :description, :thumbnail_url
 
-  def initialize(vid_data)
-    @video_id = vid_data[:id][:videoId]
-    @title = vid_data[:snippet][:title]
-    @description = vid_data[:snippet][:description]
-    @thumbnail_url = vid_data[:snippet][:thumbnails][:default][:url]
+  def initialize(video_data)
+    @video_id = video_data[:id][:videoId]
+    @title = video_data[:snippet][:title]
+    @description = video_data[:snippet][:description]
+    @thumbnail_url = video_data[:snippet][:thumbnails][:default][:url]
   end
 
 end
