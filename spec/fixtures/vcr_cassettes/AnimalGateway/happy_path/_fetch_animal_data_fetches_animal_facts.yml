@@ -27,11 +27,11 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 04 Nov 2024 02:32:26 GMT
+      - Tue, 26 Nov 2024 04:05:21 GMT
       X-Amzn-Trace-Id:
-      - Root=1-6728323a-7546ba964bf500403c94d557;Parent=4d3ce1b653ae88fb;Sampled=0;Lineage=1:09d9c399:0
+      - Root=1-67454900-33bd0e594c45d11649c2df3c;Parent=0e31303ac320d507;Sampled=0;Lineage=1:09d9c399:0
       X-Amzn-Requestid:
-      - 2d389c33-37b8-4f44-a36c-2ca08f8655d9
+      - 94b27889-9ff0-41d6-862f-aa418e1699ed
       Access-Control-Allow-Origin:
       - "*"
       Allow:
@@ -39,20 +39,32 @@ http_interactions:
       Access-Control-Allow-Headers:
       - "*"
       X-Amz-Apigw-Id:
-      - AszJIHHhPHcEbQg=
+      - B1hYMEa1PHcEWBg=
       Access-Control-Allow-Methods:
       - GET, OPTIONS, POST
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 a827400055d7bbab6e387896737d4e50.cloudfront.net (CloudFront)
+      - 1.1 08d2ad2df7ae14c356e73a61afe3347c.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN52-P1
       X-Amz-Cf-Id:
-      - lr6oEMoKICgntvxE309TW3E_9XHaP4t6N_5cKhpdU2E-KJ6Pkm0l_Q==
+      - Dfe6h1mbLdTor17Tsp5lOKlCe3CJsjZ66ckyUA7Tw0OjfXuVRAC8UQ==
     body:
       encoding: UTF-8
-      string: '[{"name": "Rabbit", "taxonomy":
+      string: '[{"name": "Jackrabbit", "taxonomy": {"kingdom": "Animalia", "phylum":
+        "Chordata", "class": "Mammalia", "order": "Lagomorpha", "family": "Leporidae",
+        "genus": "Lepus", "scientific_name": "Lepus californicus"}, "locations": ["Central-America",
+        "North-America"], "characteristics": {"prey": "Grass, twigs, bark", "name_of_young":
+        "Leveret", "group_behavior": "Solitary", "biggest_threat": "Habitat loss",
+        "most_distinctive_feature": "Long ears", "other_name(s)": "hare", "gestation_period":
+        "41-47 days", "litter_size": "one to six", "habitat": "Desert, savanna, grassland",
+        "predators": "coyotes, red-tailed hawks, bobcats", "diet": "Herbivore", "type":
+        "mammal", "common_name": "Black-tailed jackrabbit", "number_of_species": "6",
+        "location": "United States, Mexico", "group": "solitary", "color": "BrownBlackWhite",
+        "skin_type": "Fur", "top_speed": "45 mph", "lifespan": "five to eight years",
+        "weight": "three to six pounds", "length": "up to two feet", "age_of_sexual_maturity":
+        "243 days", "age_of_weaning": "14 to 21 days"}}, {"name": "Rabbit", "taxonomy":
         {"kingdom": "Animalia", "phylum": "Chordata", "class": "Mammalia", "order":
         "Lagomorpha", "family": "Leporidae", "genus": "Oryctolagus", "scientific_name":
         "Oryctolagus cuniculus"}, "locations": ["Africa", "Asia", "Eurasia", "Europe",
@@ -63,5 +75,5 @@ http_interactions:
         "There are more than 50 different species!", "color": "BrownGreyBlackWhiteTan",
         "skin_type": "Fur", "top_speed": "2.4 mph", "lifespan": "4-9 years", "weight":
         "0.5-3kg (1.1-6.6lbs)"}}]'
-  recorded_at: Mon, 04 Nov 2024 02:32:26 GMT
+  recorded_at: Tue, 26 Nov 2024 04:05:21 GMT
 recorded_with: VCR 6.3.1

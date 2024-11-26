@@ -1,0 +1,227 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://youtube.googleapis.com/youtube/v3/search?key=<YOUTUBE_API_KEY>&part=snippet&q=how%2Bto%2Bdraw%2Bwolf&safeSearch=strict
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Tue, 26 Nov 2024 02:57:57 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "vcDgGWk5suVJpM0unRNae9OQViU",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "4ye2OuJyTPW7i2QozAIsdyeFs20",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "6nQBMmyVspA"
+              },
+              "snippet": {
+                "publishedAt": "2017-06-20T16:46:14Z",
+                "channelId": "UC5XMF3Inoi8R9nSI8ChOsdQ",
+                "title": "How To Draw A Realistic Wolf",
+                "description": "Learn how to draw a realistic wolf! Grab a marker, paper, and two colored pencils (grey and black) then follow along with me.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/6nQBMmyVspA/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/6nQBMmyVspA/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/6nQBMmyVspA/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Art for Kids Hub",
+                "liveBroadcastContent": "none",
+                "publishTime": "2017-06-20T16:46:14Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "Xdu1oWx3wZvz9s-BLuskyNBg66c",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "me_kF0tMH34"
+              },
+              "snippet": {
+                "publishedAt": "2022-09-13T19:00:27Z",
+                "channelId": "UCHa-w2uf3NmywqSkA4mV-JQ",
+                "title": "EASY How to Draw HOWLING WOLF MOON",
+                "description": "FREE Cute Drawing EBOOK: https://shorturl.at/vyHIUopt-in/ NEW HERE? My name is Enrique Plazola. I'm a concept ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/me_kF0tMH34/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/me_kF0tMH34/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/me_kF0tMH34/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "EasyPicturesToDraw",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-09-13T19:00:27Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "lobGfUdVVvR4B5ndt_KfR54ojgg",
+              "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PLnc0jT1-PS3HpJ031lvpTGRf9Ld1mmdrJ"
+              },
+              "snippet": {
+                "publishedAt": "2017-06-16T20:46:04Z",
+                "channelId": "UCppyhm10w9WvWfCnZgBGegg",
+                "title": "How to draw wolves",
+                "description": "",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/rJQjbDRSlLs/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/rJQjbDRSlLs/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/rJQjbDRSlLs/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Kat Howe",
+                "liveBroadcastContent": "none",
+                "publishTime": "2017-06-16T20:46:04Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "rfYZvB7K1OQhK6rXEMtm5wFNHYI",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "GKbcXAacc9A"
+              },
+              "snippet": {
+                "publishedAt": "2014-07-25T14:04:14Z",
+                "channelId": "UC5XMF3Inoi8R9nSI8ChOsdQ",
+                "title": "How To Draw A Wolf",
+                "description": "Happy Friday, be sure to send us a photo of your art and we'll feature you in our next Monday video! Email us at This how to draw ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/GKbcXAacc9A/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/GKbcXAacc9A/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/GKbcXAacc9A/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Art for Kids Hub",
+                "liveBroadcastContent": "none",
+                "publishTime": "2014-07-25T14:04:14Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "rad1E6Pn99MQvMr1E4pzONt2vYw",
+              "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PLcWnSmcIRqJmleUYVQzz4cbFgkCjvExPH"
+              },
+              "snippet": {
+                "publishedAt": "2022-04-13T23:20:14Z",
+                "channelId": "UCChG5FtpDt0Fq28P33F92gA",
+                "title": "Art Hub- draw a Wolf",
+                "description": "",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/6nQBMmyVspA/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/6nQBMmyVspA/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/6nQBMmyVspA/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Veronica Torres",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-04-13T23:20:14Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Tue, 26 Nov 2024 02:57:57 GMT
+recorded_with: VCR 6.3.1
