@@ -6,7 +6,7 @@ class Api::V1::ParksController < ApplicationController
     end
   
     def show
-        park = Park.find_by(name: params[:name])
+        park = Park.find_by(name: params[:id])
         if park
           render json: ParkSerializer.new(park)
         else

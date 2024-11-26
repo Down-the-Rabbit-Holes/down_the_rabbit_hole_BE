@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get '/api/v1/animals/:name/prey', to: 'api/v1/animals#prey', as: 'animal_prey'
 
   get '/api/v1/parks', to: 'api/v1/parks#index', as: 'parks'
-  get '/api/v1/parks/:name', to: 'api/v1/parks#show', as: 'park'
+  get '/api/v1/parks/:id', to: 'api/v1/parks#show', as: 'park'
   get '/api/v1/parks/:name/animals', to: 'api/v1/parks#animals', as: 'park_animals'
   
   get "/api/v1/users/:user_id/user_favorites", to: "api/v1/user_favorites#index"
