@@ -117,6 +117,18 @@ require 'csv'
 #   )
 # end
 # # Step 1: Create a park
+csv_text = File.read(Rails.root.join('db', 'test_parks.csv')) # Adjust path to 'db'
+park_csv = CSV.parse(csv_text, headers: true)
+
+park_csv.each do |row|
+  Park.create!(
+    name: row['name'],
+    location: row['location'],
+    description: row['description'],
+    annual_visitors: row['annual_visitors']
+  )
+end
+
 rmnp = Park.create!(
   name: 'Rocky Mountain National Park',
   location: 'Colorado, USA',

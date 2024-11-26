@@ -6,7 +6,7 @@ class Api::V1::ParksController < ApplicationController
   end
 
   def show
-    park = Park.find_by(name: params[:name])
+    park = Park.find_by(id: params[:id])
     if park
       render json: ParkSerializer.new(park)
     else
@@ -14,12 +14,4 @@ class Api::V1::ParksController < ApplicationController
     end
   end
   
-  # def animals
-  #   park = Park.find_by(name: params[:name])
-  #   if park
-  #     render json: AnimalSerializer.new(park.animals)
-  #   else
-  #     render json: { error: "Park not found" }, status: :not_found
-  #   end
-  # end
 end
