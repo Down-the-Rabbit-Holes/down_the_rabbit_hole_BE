@@ -19,7 +19,9 @@ class Api::V1::UserFavoritesController < ApplicationController
     if user_favorite.save
       render json: @animal, status: :created
     else
-      render json: { error: "Unable to save favorite" }, status: :unprocessable_entity
+      # render json: { error: "Unable to save favorite" }, status: :unprocessable_entity
+      # Rails.logger.error user_favorite.errors.full_messages.join(", ")
+      render json: { error: user_favorite.errors.full_messages.join(", ") }, status: :unprocessable_entity
     end
   end
 
