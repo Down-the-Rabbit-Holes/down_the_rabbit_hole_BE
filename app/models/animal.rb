@@ -7,7 +7,7 @@ class Animal < ApplicationRecord
 
   has_many :prey_relationships, class_name: "PredatorPreyRelation", foreign_key: :predator_id
   has_many :prey, through: :prey_relationships, source: :prey
-  
+
   has_many :park_animals
   has_many :parks, through: :park_animals
   
