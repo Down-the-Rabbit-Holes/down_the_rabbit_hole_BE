@@ -21,25 +21,30 @@ park_csv.each do |row|
     location: row['location'],
     description: row['description'],
     annual_visitors: row['annual_visitors']
-  )ga .
+  )
 end
 
-csv_text = File.read(Rails.root.join('db', 'csv', 'animals', 'current_animals12_03.csv'))
+csv_text = File.read(Rails.root.join('db', 'csv', 'animals', 'current_animals12_03_2.csv'))
 csv = CSV.parse(csv_text, headers: true)
 animals_by_name = {}
 
 csv.each do |row|
   animal = Animal.find_or_create_by!(
     name: row['name'].singularize,
-    photo_url: row['photo_url'],
-    habitat: row['habitat'],
     scientific_name: row['scientific_name'],
-    diet: row['diet'],
+    photo_url: row['photo_url'],
+    description: row['description'],
+    group_name: row['group_name'],
+    baby_name: row['baby_name'],
     top_speed: row['top_speed'],
     life_span: row['life_span'],
     weight: row['weight'],
-    fun_fact: row['fun_fact']
- 
+    height: row['height'],
+    length: row['length'],
+    habitat: row['habitat'],
+    fun_fact: row['fun_fact'], 
+    animal_type: row['animal_type'],
+    diet: row['diet']
   )
 
   animals_by_name[animal.name.downcase] = animal
