@@ -21,10 +21,10 @@ park_csv.each do |row|
     location: row['location'],
     description: row['description'],
     annual_visitors: row['annual_visitors']
-  )
+  )ga .
 end
 
-csv_text = File.read(Rails.root.join('db', 'csv', 'animals', 'current_animals11_26.csv'))
+csv_text = File.read(Rails.root.join('db', 'csv', 'animals', 'current_animals12_03.csv'))
 csv = CSV.parse(csv_text, headers: true)
 animals_by_name = {}
 
