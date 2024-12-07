@@ -13,14 +13,20 @@ class Animal < ApplicationRecord
   
   validates :name, uniqueness: true
   validates :name,
-            :photo_url, 
-            :habitat, 
-            :scientific_name, 
-            :diet,
+            :scientific_name,
+            :photo_url,
+            :description,
+            :group_name,
+            :baby_name,
             :top_speed,
             :life_span,
             :weight,
+            :height,
+            :length,
+            :habitat, 
             :fun_fact,
+            :animal_type,
+            :diet,
             presence: true
 end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_11_24_210809) do
+ActiveRecord::Schema[7.1].define(version: 2024_12_04_035602) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -26,6 +26,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_24_210809) do
     t.string "life_span"
     t.string "weight"
     t.string "diet"
+    t.text "description"
+    t.string "group_name"
+    t.string "baby_name"
+    t.string "height"
+    t.string "length"
+    t.string "animal_type"
   end
 
   create_table "park_animals", force: :cascade do |t|
