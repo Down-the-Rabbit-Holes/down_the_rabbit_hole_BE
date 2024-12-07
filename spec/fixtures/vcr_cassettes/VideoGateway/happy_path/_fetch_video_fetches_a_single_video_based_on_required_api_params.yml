@@ -1,0 +1,227 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://youtube.googleapis.com/youtube/v3/search?key=<YOUTUBE_API_KEY>&part=snippet&q=how%2Bto%2Bdraw%2Bfox&safeSearch=strict
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Tue, 26 Nov 2024 02:07:25 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "_2XAbx1Bu261n5CwBzXB4MDFrys",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "WYDuJ3Thtcr-_sSDwpbKIxmvTRo",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "YQA38wrB8I8"
+              },
+              "snippet": {
+                "publishedAt": "2018-08-30T16:24:03Z",
+                "channelId": "UC5XMF3Inoi8R9nSI8ChOsdQ",
+                "title": "How To Draw A Cute Fox",
+                "description": "Learn how to draw a cute fox! ART SUPPLIES we love (Amazon affiliate links): Sharpie Markers http://a.co/76TMEpK Printer ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/YQA38wrB8I8/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/YQA38wrB8I8/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/YQA38wrB8I8/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Art for Kids Hub",
+                "liveBroadcastContent": "none",
+                "publishTime": "2018-08-30T16:24:03Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "POotSdCvQcKgTtBIBSkWgHQVqYo",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "VlhLEhJEWpE"
+              },
+              "snippet": {
+                "publishedAt": "2021-07-04T15:06:09Z",
+                "channelId": "UC0glsvb60s6kg58G3LxEglA",
+                "title": "Watch me PET a  wild FOX! | #shorts",
+                "description": "Please support my channel: https://paypal.me/IAA015?country.x=SE&locale.x=sv_SE #wildlife #fox #shorts This young fox was ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/VlhLEhJEWpE/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/VlhLEhJEWpE/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/VlhLEhJEWpE/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "IAA015",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-07-04T15:06:09Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "PzulcpVVBMisBOpafwXxKsdaWhs",
+              "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PLApCrStYkPZN944EeI4LZ3_GWSLf6GCTO"
+              },
+              "snippet": {
+                "publishedAt": "2018-10-17T11:27:30Z",
+                "channelId": "UC4tlO_ZaPrkKifqsOwXNVVA",
+                "title": "How to Draw a Fox",
+                "description": "Here you'll learn how to draw a fox in just a few quick steps. From this Step by Step Video you Learn to draw a cute Fox for kids.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/YQA38wrB8I8/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/YQA38wrB8I8/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/YQA38wrB8I8/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "AIR Kids Tv",
+                "liveBroadcastContent": "none",
+                "publishTime": "2018-10-17T11:27:30Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "6kMxp8oq0vUmGiRCiUJjmvpa0Ek",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "nrTU3_y9SNI"
+              },
+              "snippet": {
+                "publishedAt": "2024-04-13T12:00:42Z",
+                "channelId": "UCpsE894nSixY3ScYFgJAQXw",
+                "title": "How To Draw a Fox | Sketch Tutorial",
+                "description": "Learn how to draw a Fox with Cartooning Club XL. Explore even more tutorials on our Main, Junior, and Z channels. ⭐ Main ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/nrTU3_y9SNI/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/nrTU3_y9SNI/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/nrTU3_y9SNI/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Cartooning Club XL",
+                "liveBroadcastContent": "none",
+                "publishTime": "2024-04-13T12:00:42Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "-2rfdjY2aWsRHIbg8Fvz2bm3UhE",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "EbP4yLK1VEg"
+              },
+              "snippet": {
+                "publishedAt": "2022-06-25T13:39:05Z",
+                "channelId": "UCE_Jb_D-uI3ehQnm0jF5Tmw",
+                "title": "Today we draw a fox #simplestrokes #draw #simpledrawing  #digitalpainting",
+                "description": "",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/EbP4yLK1VEg/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/EbP4yLK1VEg/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/EbP4yLK1VEg/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "FentonPicture",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-06-25T13:39:05Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Tue, 26 Nov 2024 02:07:25 GMT
+recorded_with: VCR 6.3.1
