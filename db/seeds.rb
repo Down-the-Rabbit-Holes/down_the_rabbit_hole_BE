@@ -24,7 +24,7 @@ park_csv.each do |row|
   )
 end
 
-csv_text = File.read(Rails.root.join('db', 'csv', 'animals', 'current_animals12_03_2.csv'))
+csv_text = File.read(Rails.root.join('db', 'csv', 'animals', 'current_animals_12_6.csv'))
 csv = CSV.parse(csv_text, headers: true)
 animals_by_name = {}
 
