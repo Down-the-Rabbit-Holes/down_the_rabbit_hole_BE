@@ -14,9 +14,8 @@ class Api::V1::UserFavoritesController < ApplicationController
   end
 
   def create
-    user_favorite = UserFavorite.new(user_id: @user.id, animal_id: @animal.id)
-    
-    if user_favorite.save
+    user_favorite = UserFavorite.create(user_id: @user.id, animal_id: @animal.id)
+    if user_favorite
       render json: @animal, status: :created
     else
       render json: { error: "Unable to save favorite" }, status: :unprocessable_entity
@@ -37,8 +36,9 @@ class Api::V1::UserFavoritesController < ApplicationController
   private
 
   def set_user
-    @user = User.find(params[:user_id])
+    @user = User.find_by(id: params[:user_id])
   end
+  
 
   def set_animal
     @animal = Animal.find(params[:animal_id])
