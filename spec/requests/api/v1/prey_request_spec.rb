@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Animals", type: :request do
+RSpec.describe "Prey", type: :request do
   before(:each) do
     @rabbit = Animal.create!(
       name: "rabbit",
@@ -40,50 +40,27 @@ RSpec.describe "Animals", type: :request do
       predator_id: @rabbit.id,
       prey_id: @grass.id
     )
-    @fox = Animal.create!(
-      name: "RED FOX",
-      photo_url: "http://example.com/rabbit.jpg",
-      habitat: "forest",
-      scientific_name: "Oryctolagus cuniculus",
-      fun_fact: "Rabbits have 360-degree vision.",
-      top_speed: "45 km/h",
-      life_span: "9 years",
-      weight: "2 kg",
-      diet: "herbivore",
-      description: "This is a rabbit",
-      group_name: "Group of rabbits",
-      baby_name: "bunny",
-      height: "small",
-      length: "also small",
-      animal_type: "RED FOX"
-    )
-    @rabbit_predator = PredatorPreyRelation.create!(
-      predator_id: @fox.id,
-      prey_id: @rabbit.id
-    )
   end
 
-  describe "GET /show & /relationships HAPPY PATHS" do
-    it "returns one animal and all it's facts" do
-      get "/api/v1/animals/#{@rabbit.id}"
+  describe "GET /index HAPPY PATHS" do
+    it 'returns the current animals prey' do
+      get "/api/v1/animals/#{@rabbit.id}/prey"
 
       expect(response).to be_successful
-
-      animal = JSON.parse(response.body, symbolize_names: true)[:data]
-
-      expect(animal[:attributes][:name]).to eq("rabbit")
+      
+      prey = JSON.parse(response.body, symbolize_names: true)[:data].first
+   
+      expect(prey[:attributes][:name]).to eq("grass")
     end
   end
 
-  describe "GET /show SAD PATHS" do
+  describe "GET /index SAD PATHS" do
     it "returns an error if the animal is not found" do
-      get "/api/v1/animals/99999"
+      get "/api/v1/animals/99999/prey"
 
-      expect(response).to_not be_successful
       expect(response).to have_http_status(:not_found)
 
       error_message = JSON.parse(response.body, symbolize_names: true)[:error]
-  
       expect(error_message).to eq("Animal not found")
     end
   end

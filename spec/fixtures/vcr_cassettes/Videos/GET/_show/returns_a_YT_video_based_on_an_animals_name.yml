@@ -25,7 +25,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Tue, 26 Nov 2024 02:57:57 GMT
+      - Mon, 09 Dec 2024 00:45:32 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -43,7 +43,7 @@ http_interactions:
       string: |
         {
           "kind": "youtube#searchListResponse",
-          "etag": "vcDgGWk5suVJpM0unRNae9OQViU",
+          "etag": "mX3Q4bVOe9YEjGZK2xzIEvGFWa8",
           "nextPageToken": "CAUQAA",
           "regionCode": "US",
           "pageInfo": {
@@ -121,40 +121,6 @@ http_interactions:
             },
             {
               "kind": "youtube#searchResult",
-              "etag": "lobGfUdVVvR4B5ndt_KfR54ojgg",
-              "id": {
-                "kind": "youtube#playlist",
-                "playlistId": "PLnc0jT1-PS3HpJ031lvpTGRf9Ld1mmdrJ"
-              },
-              "snippet": {
-                "publishedAt": "2017-06-16T20:46:04Z",
-                "channelId": "UCppyhm10w9WvWfCnZgBGegg",
-                "title": "How to draw wolves",
-                "description": "",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/rJQjbDRSlLs/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/rJQjbDRSlLs/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/rJQjbDRSlLs/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "Kat Howe",
-                "liveBroadcastContent": "none",
-                "publishTime": "2017-06-16T20:46:04Z"
-              }
-            },
-            {
-              "kind": "youtube#searchResult",
               "etag": "rfYZvB7K1OQhK6rXEMtm5wFNHYI",
               "id": {
                 "kind": "youtube#video",
@@ -185,6 +151,40 @@ http_interactions:
                 "channelTitle": "Art for Kids Hub",
                 "liveBroadcastContent": "none",
                 "publishTime": "2014-07-25T14:04:14Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "lobGfUdVVvR4B5ndt_KfR54ojgg",
+              "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PLnc0jT1-PS3HpJ031lvpTGRf9Ld1mmdrJ"
+              },
+              "snippet": {
+                "publishedAt": "2017-06-16T20:46:04Z",
+                "channelId": "UCppyhm10w9WvWfCnZgBGegg",
+                "title": "How to draw wolves",
+                "description": "",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/rJQjbDRSlLs/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/rJQjbDRSlLs/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/rJQjbDRSlLs/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Kat Howe",
+                "liveBroadcastContent": "none",
+                "publishTime": "2017-06-16T20:46:04Z"
               }
             },
             {
@@ -223,5 +223,5 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Tue, 26 Nov 2024 02:57:57 GMT
+  recorded_at: Mon, 09 Dec 2024 00:45:32 GMT
 recorded_with: VCR 6.3.1
