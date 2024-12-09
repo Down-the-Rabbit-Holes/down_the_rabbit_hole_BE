@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   get '/api/v1/animals/:id', to: 'api/v1/animals#show', as: 'animal_details'
-  get '/api/v1/animals/:id/relationships', to: 'api/v1/animals#relationships', as: 'animal_relationships'
+  get '/api/v1/animals/:animal_id/prey', to: 'api/v1/prey#index'
+  get '/api/v1/animals/:animal_id/predators', to: 'api/v1/predator#index'
 
   get '/api/v1/parks', to: 'api/v1/parks#index', as: 'parks'
   get '/api/v1/parks/:id', to: 'api/v1/parks#show', as: 'park'

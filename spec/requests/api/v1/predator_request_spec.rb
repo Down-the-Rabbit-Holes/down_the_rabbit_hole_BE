@@ -19,27 +19,6 @@ RSpec.describe "Animals", type: :request do
       length: "also small",
       animal_type: "rabbit"
     )
-    @grass = Animal.create!(
-      name: "grass",
-      photo_url: "http://example.com/rabbit.jpg",
-      habitat: "forest",
-      scientific_name: "grass",
-      fun_fact: "grass",
-      top_speed: "grass",
-      life_span: "grass",
-      weight: "grass",
-      diet: "grass",
-      description: "This is a grass",
-      group_name: "Group of grass",
-      baby_name: "grass",
-      height: "small",
-      length: "also small",
-      animal_type: "grass"
-    )
-    @rabbit_prey = PredatorPreyRelation.create!(
-      predator_id: @rabbit.id,
-      prey_id: @grass.id
-    )
     @fox = Animal.create!(
       name: "RED FOX",
       photo_url: "http://example.com/rabbit.jpg",
@@ -63,27 +42,25 @@ RSpec.describe "Animals", type: :request do
     )
   end
 
-  describe "GET /show & /relationships HAPPY PATHS" do
-    it "returns one animal and all it's facts" do
-      get "/api/v1/animals/#{@rabbit.id}"
+  describe "GET /index HAPPY PATHS" do
+    it 'returns the current animals predators' do
+      get "/api/v1/animals/#{@rabbit.id}/predators"
 
       expect(response).to be_successful
-
-      animal = JSON.parse(response.body, symbolize_names: true)[:data]
-
-      expect(animal[:attributes][:name]).to eq("rabbit")
+      
+      prey = JSON.parse(response.body, symbolize_names: true)[:data].first
+   
+      expect(prey[:attributes][:name]).to eq("RED FOX")
     end
   end
 
-  describe "GET /show SAD PATHS" do
+  describe "GET /index SAD PATHS" do
     it "returns an error if the animal is not found" do
-      get "/api/v1/animals/99999"
+      get "/api/v1/animals/99999/predators"
 
-      expect(response).to_not be_successful
       expect(response).to have_http_status(:not_found)
 
       error_message = JSON.parse(response.body, symbolize_names: true)[:error]
-  
       expect(error_message).to eq("Animal not found")
     end
   end

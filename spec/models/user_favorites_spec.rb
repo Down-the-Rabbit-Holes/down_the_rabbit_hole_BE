@@ -11,17 +11,22 @@ RSpec.describe UserFavorite, type: :model do
     it { should validate_presence_of(:animal_id) }
     
     let(:user) { User.create!(name: 'Test User') } 
-    let(:animal) { Animal.create!(name: 'Test Animal',
-                                  photo_url: "www.pexels.com/photo/two-playful-coyotes-27067820/",
-                                  prey: "Rabbit, Mice, Deer",
-                                  predators: "Human, Bears, Wolves, Great horned owls, Bald Eagles",
-                                  habitat: "Forests, plains and deserts",
-                                  scientific_name: "Canis latrans",
-                                  fun_fact: "Also known as the Prairie Wolf!",
-                                  top_speed: "40 miles per hour",
-                                  life_span: "10 - 15 years",
-                                  weight: "7kg - 21kg (15lbs - 46lbs)",
-                                  diet: "Carnivore") } 
+    let(:animal) { Animal.create!(
+      name: "animal",
+      photo_url: "http://example.com/rabbit.jpg",
+      habitat: "forest",
+      scientific_name: "Oryctolagus cuniculus",
+      fun_fact: "Rabbits have 360-degree vision.",
+      top_speed: "45 km/h",
+      life_span: "9 years",
+      weight: "2 kg",
+      diet: "herbivore",
+      description: "This is a rabbit",
+      group_name: "Group of rabbits",
+      baby_name: "bunny",
+      height: "small",
+      length: "also small",
+      animal_type: "rabbit") } 
 
     subject { UserFavorite.new(user: user, animal: animal) }
   
