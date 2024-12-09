@@ -15,7 +15,7 @@ class Api::V1::UserFavoritesController < ApplicationController
 
   def create
     user_favorite = UserFavorite.create(user_id: @user.id, animal_id: @animal.id)
-    if user_favorite.persisted?
+    if user_favorite#.persisted?
       render json: @animal, status: :created
     else
       render json: { error: "Unable to save favorite" }, status: :unprocessable_entity
