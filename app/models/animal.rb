@@ -11,7 +11,7 @@ class Animal < ApplicationRecord
   has_many :park_animals
   has_many :parks, through: :park_animals
   
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true#, uniqueness: true
   validates :scientific_name,
             :photo_url,
             :description,
